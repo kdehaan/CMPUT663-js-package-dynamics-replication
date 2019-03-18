@@ -1,1 +1,1 @@
-CMPUT663-js-package-dynamics-replication
+Replication of ‘A Look at the Dynamics of the JavaScript Package Ecosystem’
