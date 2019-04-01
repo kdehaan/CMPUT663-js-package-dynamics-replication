@@ -1,0 +1,14 @@
+{
+  "name": "version-resolver",
+  "version": "0.0.1",
+  "description": "Script that reads version queries and candidates in JSON from standard input and produces the best version for the query as output",
+  "main": "version-resolver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erik Wittern",
+  "license": "MIT",
+  "dependencies": {
+    "semver": "^5.1.0"
+  }
+}

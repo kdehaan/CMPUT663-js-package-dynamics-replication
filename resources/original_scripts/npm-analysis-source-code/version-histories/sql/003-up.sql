@@ -1,0 +1,6 @@
+CREATE TABLE `projects` (
+    `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `user` VARCHAR(254) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+    `repo` VARCHAR(254) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+    UNIQUE KEY (`user`, `repo`)
+);
