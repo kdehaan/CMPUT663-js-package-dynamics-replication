@@ -77,7 +77,6 @@ func main() {
 	 maximum search query size
 	*/
 	for i := 0; i < 4197; i += 250 {
-		sem <- 1
 		wg.Add(1)
 		go get_package_names(false, i)
 	}
