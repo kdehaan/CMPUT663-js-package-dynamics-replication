@@ -29,18 +29,21 @@ Email: \{kdehaan,neagu,rsauveho,abram.hindle\}@ualberta.ca}
 \begin{abstract}
 In recent years, the tools and packages most commonly involved with JavaScript development have evolved rapidly.
 Newer packages such as Angular and React have experienced a marked increase in popularity among developers, while frameworks such as jQuery
-have begun to phase out.\footnote[1]{https://insights.stackoverflow.com/survey/2016\#technology-most-popular-technologies, 
+have begun to phase out.\footnote[1]{\label{adoption}https://insights.stackoverflow.com/survey/2016\#technology-most-popular-technologies, 
 https://insights.stackoverflow.com/survey/2017\#technology-\_-frameworks-libraries-and-other-technologies, https://insights.stackoverflow.com/survey/2018\#technology-\_-frameworks-libraries-and-tools}
-For this reason, we take a second look at a 2016 paper by Wittern, Suter and Rajagopalan \cite{Wittern:2016} to see what has changed, and if previously observed trends have remained constant.
-In the original paper, the authors use the \emph{node package manager} (\code{npm}) to gain 
-insight into the JavaScript ecosystem as a whole. \code{npm}, a hosting service for JavaScript-based software, has only grown in popularity since
-the original paper, with more than three times as many hosted packages (now over 750,000) and over ten times as many weekly package downloads (now over ten billion per week).
-Additionally, data collected from projects publicly hosted on \code{GitHub} allow us to observe an alternative measure of popularity. 
+For this reason we take a second look at a 2016 paper by Wittern, Suter and Rajagopalan \cite{Wittern:2016} to see what aspects of the JavaScript package ecosystem have changed, 
+and if previously observed trends have remained constant.
+In the original paper the authors use the \emph{node package manager} (\code{npm}) to gain 
+insight into the JavaScript ecosystem as a whole, and data from projects publicly hosted on \code{GitHub} to observe an alternative measure of popularity. We adhere to the same methods of analysis, and extend the data to capture
+more recent information up to April 1\textsuperscript{st} 2019.
 Ultimately, this second look aims to discover if recent years have had any significant effects on ecosystem-wide trends, and provide developers with further insight into how packages are used and evolve.
 \end{abstract}
 
 \section{Introduction}
-
+This paper is a replication of \emph{A Look at the Dynamics of the JavaScript Package Ecosystem}\cite{Wittern:2016} that performs extensive analysis of 
+the \emph{node package manager} (\code{npm}), a popular distributor of JavaScript-based packages. Since the publishing of the original paper, the usage and scale of \code{npm} has only grown. With more than three times as many hosted packages (now over 750,000) 
+and over ten times as many weekly package downloads (now over ten billion per week), the raw volume of data and the complexity of package dependency graphs has increased significantly. 
+Additionally, the major frameworks used in JavaScript development have undergone a rapid transformation as packages such as Angular and React are adopted\footnotemark[\ref{adoption}].
 The core contributions we make are as follows:
 \begin{itemize}
   \item We replicate and verify the results found in the original paper for the window of October 1\textsuperscript{st} 2010 to September 1\textsuperscript{st} 2015.
@@ -49,7 +52,7 @@ The core contributions we make are as follows:
   \item We determine if the ongoing maturation of the JavaScript ecosystem has resulted in tangible changes to version numbering or adoption practices.
 \end{itemize}
 
-\section{Related Work}
+% \section{Related Work}
 
 
 \section{Methodology}
