@@ -10,9 +10,10 @@
 \usepackage{subfig}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    \def\code#1{\texttt{#1}}
 \begin{document}
 
-\title{Replication of ‘A Look at the Dynamics of the JavaScript Package Ecosystem’\\}
+\title{A Second Look at the Dynamics of the JavaScript Package Ecosystem\\}
 
 \author{\IEEEauthorblockN{ Kevin de Haan, Gregory Neagu, Frederic Sauve-Hoover, Abram Hindle}
 \IEEEauthorblockA{\textit{Department of Computing Science} \\
@@ -24,8 +25,18 @@ Email: \{kdehaan,neagu,rsauveho,abram.hindle\}@ualberta.ca}
 
 \maketitle
 
+% Footnote should maybe be a full source, or just one link
 \begin{abstract}
-  
+In recent years, the tools and packages most commonly involved with JavaScript development have evolved rapidly.
+Newer packages such as Angular and React have experienced a marked increase in popularity among developers, while libraries such as jQuery
+have begun to phase out.\footnote[1]{https://insights.stackoverflow.com/survey/2016\#technology-most-popular-technologies, 
+https://insights.stackoverflow.com/survey/2017\#technology-\_-frameworks-libraries-and-other-technologies, https://insights.stackoverflow.com/survey/2018\#technology-\_-frameworks-libraries-and-tools}
+For this reason, we take a second look at a paper by Wittern, Suter and Rajagopalan \cite{Wittern:2016} based on data up to September 2015 to see what has changed, and if previously observed trends have remained constant.
+In the original paper, the authors use the \emph{node package manager} (\code{npm}) to gain 
+insight into the JavaScript ecosystem as a whole. \code{npm}, a hosting service for JavaScript-based software, has only grown in popularity since
+the original paper, with more than three times as many hosted packages (now over 750,000) and over ten times as many weekly package downloads (now over ten billion per week).
+Additionally, data collected from projects publicly hosted on \code{GitHub} allow us to observe an alternative measure of popularity. 
+Ultimately, this second look aims to discover if recent years have had any significant effects on ecosystem-wide trends, and provide developers with further insight into how packages are used and evolve.
 \end{abstract}
 
 \section{Introduction}
@@ -57,11 +68,17 @@ Email: \{kdehaan,neagu,rsauveho,abram.hindle\}@ualberta.ca}
 \section{Conclusion}
 
 
-% \begin{thebibliography}{00}
-  
+\begin{thebibliography}{00}
+  \bibitem{Wittern:2016}
+  Erik Wittern, Philippe Suter, and Shriram Rajagopalan.
+  \newblock A look at the dynamics of the javascript package ecosystem.
+  \newblock In {\em Proceedings of the 13th International Conference on Mining
+    Software Repositories}, MSR '16, pages 351--361, New York, NY, USA, 2016.
+    ACM.
 
 
-% \end{thebibliography}
+
+\end{thebibliography}
 \vspace{12pt}
 
 \end{document}

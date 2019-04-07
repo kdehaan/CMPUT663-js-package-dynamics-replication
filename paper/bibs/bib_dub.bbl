@@ -1,3 +1,10 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Wittern:2016:LDJ:2901739.2901743}
+Erik Wittern, Philippe Suter, and Shriram Rajagopalan.
+\newblock A look at the dynamics of the javascript package ecosystem.
+\newblock In {\em Proceedings of the 13th International Conference on Mining
+  Software Repositories}, MSR '16, pages 351--361, New York, NY, USA, 2016.
+  ACM.
 
 \end{thebibliography}
