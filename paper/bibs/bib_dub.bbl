@@ -1,5 +1,13 @@
 \begin{thebibliography}{1}
 
+\bibitem{Blincoe:2015}
+Kelly Blincoe, Francis Harrison, and Daniela Damian.
+\newblock Ecosystems in github and a method for ecosystem identification using
+  reference coupling.
+\newblock In {\em Proceedings of the 12th Working Conference on Mining Software
+  Repositories}, MSR '15, pages 202--207, Piscataway, NJ, USA, 2015. IEEE
+  Press.
+
 \bibitem{Gousi13}
 Georgios Gousios.
 \newblock The ghtorrent dataset and tool suite.
@@ -7,7 +15,39 @@ Georgios Gousios.
   Repositories}, MSR '13, pages 233--236, Piscataway, NJ, USA, 2013. IEEE
   Press.
 
-\bibitem{Wittern:2016:LDJ:2901739.2901743}
+\bibitem{LUNGU2010264}
+Mircea Lungu, Michele Lanza, Tudor Gîrba, and Romain Robbes.
+\newblock The small project observatory: Visualizing software ecosystems.
+\newblock {\em Science of Computer Programming}, 75(4):264 -- 275, 2010.
+\newblock Experimental Software and Toolkits (EST 3): A special issue of the
+  Workshop on Academic Software Development Tools and Techniques (WASDeTT
+  2008).
+
+\bibitem{Manikas:2013}
+Konstantinos Manikas and Klaus~Marius Hansen.
+\newblock Software ecosystems - a systematic literature review.
+\newblock {\em J. Syst. Softw.}, 86(5):1294--1306, May 2013.
+
+\bibitem{book}
+David Messerschmitt and Clemens Szyperski.
+\newblock {\em Software Ecosystem: Understanding an Indispensable Technology
+  and Industry}.
+\newblock 01 2003.
+
+\bibitem{8244229}
+M.~{Seppänen}, S.~{Hyrynsalmi}, K.~{Manikas}, and A.~{Suominen}.
+\newblock Yet another ecosystem literature review: 10+1 research communities.
+\newblock In {\em 2017 IEEE European Technology and Engineering Management
+  Summit (E-TEMS)}, pages 1--8, Oct 2017.
+
+\bibitem{Serebrenik:2015}
+Alexander Serebrenik and Tom Mens.
+\newblock Challenges in software ecosystems research.
+\newblock In {\em Proceedings of the 2015 European Conference on Software
+  Architecture Workshops}, ECSAW '15, pages 40:1--40:6, New York, NY, USA,
+  2015. ACM.
+
+\bibitem{Wittern:2016}
 Erik Wittern, Philippe Suter, and Shriram Rajagopalan.
 \newblock A look at the dynamics of the javascript package ecosystem.
 \newblock In {\em Proceedings of the 13th International Conference on Mining

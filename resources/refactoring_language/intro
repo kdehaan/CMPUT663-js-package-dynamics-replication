@@ -1,0 +1,56 @@
+
+
+
+Software ecosystems consist of software projects that are
+developed and evolve together in a shared environment [13].
+Research on such ecosystems only recently emerged within
+software engineering [15]. 
+
+Software ecosystems are environments that form as projects evolve in parallel,
+becoming interconnected as contexts and dependencies span companies and communities [13]. 
+Research on these systems has increased rapidly in the recent past [new], investigating
+their characteristics and behaviour as they develop [14]. Understanding how software
+ecosystems form and change is valuable from both a software as well as a business standpoint [15],
+and is important for informing developers how technologies are used over time [26]. 
+An understanding of software ecosystems can inform decisions on when to adopt frameworks and how long
+to support them, as well as provide insight into how changes to software propagate throughout the community [wittern].
+
+
+
+
+ It addresses, among other things,
+the analysis of the characteristics and evolution of software
+ecosystems, which some researchers consider to be a central
+subject in this field of research [26]. To that regard, some
+software ecosystems have been scientifically assessed, including the Maven [23], Apache [2], Gentoo [4], Ruby [11], and
+R [8] ecosystems. Nonetheless, a systematic literature study
+from 2013 found that research regarding real-world software
+ecosystems is lacking [14].
+The study of characteristics and the evolution of software
+ecosystems is an end in itself, allowing to understand how
+certain technologies spread or why others fail. In addition,
+this research can also inform the design of new ecosystems
+and associated tooling, including technical as well as social
+aspects [26]. Furthermore, as software projects are seldom
+created in isolation, studying individual software projects
+often requires studying the ecosystem around them [3].
+The node package manager (npm) combines a set of open
+source tools that developers use to describe their JavaScript
+packages, and specifically Node.js packages. These tools include, for example, a command line interface to create and
+maintain package.json files, which declare, among other
+things, the name, description, version, and dependencies of
+a package. npm furthermore features a registry that developers can use to publish their packages, making them available
+for others to use. Packages within npm may depend on each
+other, and software projects outside of npm, for example applications, may specify dependencies to packages hosted on
+npm. Since its creation in 2009, npm has grown rapidly to now
+feature over 230, 000 packages (as of January 28th, 2016).
+npm provides a complete set of various historic data points
+on the packages in the ecosystem. This data thus not only
+provides insights into the current state of the ecosystem, but
+also into how the ecosystem evolved over time. The diversity
+of available data points furthermore allows us to assess the
+ecosystem from multiple perspectives and to compare these
+perspectives. Understanding npm provides valuable insights
+into the rapid growth JavaScript and Node.js experienced
+within the last years. It also helps to understand how individual packages rose in popularity, prevailed, and sometimes
+were eventually replaced or disregarded.

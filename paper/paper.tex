@@ -39,6 +39,15 @@ Ultimately, this second look aims to discover if recent years have had any signi
 \end{abstract}
 
 \section{Introduction}
+Software ecosystems are environments that form as projects evolve in parallel,
+becoming interconnected as contexts and dependencies span companies and communities \cite{LUNGU2010264}. 
+Research on these systems has increased rapidly in the recent past \cite{Manikas:2017}, investigating
+their characteristics and behaviour as they develop \cite{Manikas:2013}. Understanding how software
+ecosystems form and change is valuable from both a software as well as a business standpoint\cite{Messerschmitt},
+and is important for informing developers how technologies are used over time \cite{Serebrenik:2015}. 
+An understanding of software ecosystems can inform decisions on when to adopt frameworks and how long
+to support them, as well as provide insight into how changes to software propagate throughout the community \cite{Wittern:2016}.
+
 This paper is a replication of \emph{A Look at the Dynamics of the JavaScript Package Ecosystem}\cite{Wittern:2016} that performs extensive analysis of 
 the \emph{node package manager} (\code{npm}), a popular distributor of JavaScript-based packages. Since the publishing of the original paper, the usage and scale of \code{npm} has only grown. With more than three times as many hosted packages (over 750,000 as of April 1\textsuperscript{st} 2019) 
 and over ten times as many weekly package downloads (now over ten billion per week), the raw volume of data and the complexity of package dependency graphs has increased significantly. 
@@ -58,8 +67,8 @@ The core contributions we make are as follows:
 % CHECK IF THE NUMBERS ARE RIGHT
 The window of data analyzed within this paper is October 1\textsuperscript{st} 2010 (as in the original paper) to April 1\textsuperscript{st} 2019.
 We collected from three publicly available data sets. Two of these, the \code{npm} registry and the \code{GitHub} repository platform, are from the same source as in the original paper.
-To find repositories relying \code{npm}, we used the Google BigQuery \code{github\_repos} data set, updated weekly\footnote{https://github.com/fhoffa/analyzing\_github/}.
-By using this set we are able to analyze \code{GitHub} data without being constrained to the currently available window provided by the GHTorrent project\cite{ghtorrent}.
+To find repositories relying on \code{npm}, we used the Google BigQuery \code{github\_repos} data set, updated weekly\footnote{https://github.com/fhoffa/analyzing\_github/}.
+By using this set we are able to analyze \code{GitHub} data without being constrained to the currently available window provided by the GHTorrent project\cite{Gousi13}.
 The final data set encompasses 797,940 packages and \textbf{\#VALUE} applications.
 
 \subsection{Package Metadata}
@@ -96,21 +105,63 @@ The final data set encompasses 797,940 packages and \textbf{\#VALUE} application
 
 
 \begin{thebibliography}{00}
+
+  \bibitem{Blincoe:2015}
+  Kelly Blincoe, Francis Harrison, and Daniela Damian.
+  \newblock Ecosystems in github and a method for ecosystem identification using
+    reference coupling.
+  \newblock In {\em Proceedings of the 12th Working Conference on Mining Software
+    Repositories}, MSR '15, pages 202--207, Piscataway, NJ, USA, 2015. IEEE
+    Press.
+  
+  \bibitem{Gousi13}
+  Georgios Gousios.
+  \newblock The ghtorrent dataset and tool suite.
+  \newblock In {\em Proceedings of the 10th Working Conference on Mining Software
+    Repositories}, MSR '13, pages 233--236, Piscataway, NJ, USA, 2013. IEEE
+    Press.
+  
+  \bibitem{LUNGU2010264}
+  Mircea Lungu, Michele Lanza, Tudor Gîrba, and Romain Robbes.
+  \newblock The small project observatory: Visualizing software ecosystems.
+  \newblock {\em Science of Computer Programming}, 75(4):264 -- 275, 2010.
+  \newblock Experimental Software and Toolkits (EST 3): A special issue of the
+    Workshop on Academic Software Development Tools and Techniques (WASDeTT
+    2008).
+  
+  \bibitem{Manikas:2013}
+  Konstantinos Manikas and Klaus~Marius Hansen.
+  \newblock Software ecosystems - a systematic literature review.
+  \newblock {\em J. Syst. Softw.}, 86(5):1294--1306, May 2013.
+  
+  \bibitem{Messerschmitt}
+  David Messerschmitt and Clemens Szyperski.
+  \newblock {\em Software Ecosystem: Understanding an Indispensable Technology
+    and Industry}.
+  \newblock 01 2003.
+  
+  \bibitem{Manikas:2017}
+  M.~{Seppänen}, S.~{Hyrynsalmi}, K.~{Manikas}, and A.~{Suominen}.
+  \newblock Yet another ecosystem literature review: 10+1 research communities.
+  \newblock In {\em 2017 IEEE European Technology and Engineering Management
+    Summit (E-TEMS)}, pages 1--8, Oct 2017.
+  
+  \bibitem{Serebrenik:2015}
+  Alexander Serebrenik and Tom Mens.
+  \newblock Challenges in software ecosystems research.
+  \newblock In {\em Proceedings of the 2015 European Conference on Software
+    Architecture Workshops}, ECSAW '15, pages 40:1--40:6, New York, NY, USA,
+    2015. ACM.
+  
   \bibitem{Wittern:2016}
   Erik Wittern, Philippe Suter, and Shriram Rajagopalan.
   \newblock A look at the dynamics of the javascript package ecosystem.
   \newblock In {\em Proceedings of the 13th International Conference on Mining
     Software Repositories}, MSR '16, pages 351--361, New York, NY, USA, 2016.
     ACM.
-
-  \bibitem{ghtorrent}
-  Georgios Gousios.
-  \newblock The ghtorrent dataset and tool suite.
-  \newblock In {\em Proceedings of the 10th Working Conference on Mining Software
-    Repositories}, MSR '13, pages 233--236, Piscataway, NJ, USA, 2013. IEEE
-    Press.
-
-\end{thebibliography}
+  
+  \end{thebibliography}
+  
 \vspace{12pt}
 
 \end{document}
