@@ -1,5 +1,12 @@
 \begin{thebibliography}{1}
 
+\bibitem{Gousi13}
+Georgios Gousios.
+\newblock The ghtorrent dataset and tool suite.
+\newblock In {\em Proceedings of the 10th Working Conference on Mining Software
+  Repositories}, MSR '13, pages 233--236, Piscataway, NJ, USA, 2013. IEEE
+  Press.
+
 \bibitem{Wittern:2016:LDJ:2901739.2901743}
 Erik Wittern, Philippe Suter, and Shriram Rajagopalan.
 \newblock A look at the dynamics of the javascript package ecosystem.
