@@ -84,3 +84,120 @@ were eventually replaced or disregarded.
 
 ///// ecosystem evolution
 
+Created in 2009, \code{npm} has grown
+rapidly in popularity and scope over the last ten years, and 
+as of the original paper showed no signs of slowing down \cite{Wittern:2016}.
+We investigate the state of the \code{npm} ecosystem
+since September 1\super{st} 2015, and look for any signs of deterioration in 
+the health of the ecosystem. Periods of stagnating growth would suggest
+that developer interest is waning, while steady activity would 
+indicate that the ecosystem as a whole is healthy and will continue to
+evolve. To search for these potential indicators in the \code{npm} package environment,
+we investigate the number of packages created and updated over time, as well
+as system-wide trends of dependencies within packages. In figure 1 
+[INSERT DATA COMMENTARY HERE]. Figure 2 [MORE DATA COMMENTARY].
+
+
+
+The npm package repository was created in 2009. Over the
+last six years, the software repository has evolved rapidly
+and currently hosts over 230, 000 packages. We investigate
+the evolution of this ecosystem over this period and look for
+signs of stagnation. Stagnation indicates that the community 
+involvement has slowed down, while continued signs of
+growth and activity indicates that there is increasing adoption 
+and contributions by the developer community. To
+characterize growth and activity, we look at the number of
+new packages added to the repository over the observation
+period, the number of packages that were updated, and the
+dependencies among packages.
+
+In Figure 1, we show the growth in number of packages
+that are being added to npm every month, and the number of
+packages that are being updated per month. Broadly speaking, 
+we find that the developer community around Node.js
+has been steadily increasing over the last 6 years, as evidenced 
+by the increasing number of packages being created every month 
+in the npm repository. In addition, the
+community is also quite active in terms of maintaining the
+packages hosted in the repository, as indicated by the twofold 
+increase in the number of packages being updated every
+month.
+
+
+We then compare the growth in the total number of packages over 
+time with the dependencies, i.e., relationships, between packages. 
+The dependency measure per package is
+the sum of number of its dependencies mentioned in dependencies 
+and devDependencies fields in the package.json
+file corresponding to each package. As shown in Figure 2,
+not only is the npm ecosystem growing superlinearly in terms
+of the number of packages and dependencies, the relationship 
+among packages is also growing at a much higher rate,
+indicating that the packages are depending more and more
+on each other. We confirm our observation by plotting the
+average number of dependencies per package (red line) in
+the same figure. On average, a package in npm had approximately
+ 4-6 dependencies on other packages in late 2015,
+compared to just one dependency in early 2011.
+
+To further understand the dependency relationship between 
+packages, we constructed a directed graph, where
+packages form the vertices and directed edges between vertices
+ represent the dependency between the two packages.
+The out degree of a vertex indicates the number of dependencies
+ of the package represented by the vertex, while the
+in degree represents the number of packages that depend on
+the given package.
+Figure 3 shows the distribution of the out degrees across
+all packages over time. The number of packages having one
+or more dependencies has increased from 23.4% in January
+2011 to 81.3% by end of August 2015. Specifically, there has
+been a steady increase in the number of packages with 6 or
+more dependencies, starting with 0% in January 2011 and
+reaching 32.5% by end of August 2015.
+Given the increasing number of external dependencies per
+package, we tried to understand whether such dependencies 
+were spread equally across all packages or if they were
+confined to just a limited set of packages. To answer this
+question, we look at Figure 4, showing the distribution of
+in degrees across all packages. At the end of August 2015,
+72.5% of packages had no incoming dependency, i.e., they
+had no dependent packages, while only 4.9% of packages had
+6 or more dependents, up from 1.1% in January 2011. Such
+uneven distribution of package dependencies has been previously 
+observed in other software ecosystems as well [18].
+
+To better visualize the status of inter-package dependencies, we constructed
+a directed dependency graph using dependants as out-degrees and
+dependencies as in-degrees. Based on this dependency graph, Figure 3
+displays the percentage of packages with various amounts of dependencies. 
+[MIGHT NEED TO CHANGE BASED ON DATA: While the average number of dependencies 
+of packages continues to increase, the percentage of packages with zero 
+to three dependencies has actually increased since the end of the original paper's
+reporting period \cite{Wittern:2016}. This suggests some changes to developer 
+behaviour, either deliberately as programmers seek to avoid the perils of 
+complicated dependency trees \cite{Kikas}, or as a natural result of the ever-changing
+ways in which JavaScript is used for project development.
+
+
+
+
+
+In Section 4, we investigate the ranking of packages within
+and outside the ecosystem to shed light on the dynamics of
+package popularity in the npm ecosystem.
+Takeaways. We find that the npm ecosystem continues to
+grow in terms of the number of packages it hosts. At the
+same time, the number of packages being updated monthly
+has also grown two-fold, indicating that the developer 
+community remains quite active in terms of maintaining their
+packages. Looking at the relationships between packages,
+we find there is an increasing amount of dependency across
+packages, with 81.3% of them depending on at least one
+package and 32.5% of them depending on 6 or more packages.
+ However, the proportion of packages that are being
+depended upon is only 27.5% of overall packages in npm, 
+indicating that package dependencies exhibit a power law 
+distribution, as has been observed by prior research on 
+software related artifacts and ecosystems [12, 18].

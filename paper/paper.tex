@@ -113,6 +113,31 @@ The final data set encompasses 797,940 packages and \textbf{\#VALUE} application
 
 \section{Ecosystem Evolution}
 
+Created in 2009, \code{npm} has grown
+rapidly in popularity and scope over the last ten years, and 
+as of the original paper showed no signs of slowing down \cite{Wittern:2016}.
+We investigate the state of the \code{npm} ecosystem
+since September 1\textsuperscript{st} 2015, and look for any signs of deterioration in 
+the health of the ecosystem. Periods of stagnating growth would suggest
+that developer interest is waning, while steady activity would 
+indicate that the ecosystem as a whole is healthy and will continue to
+evolve. To search for these potential indicators in the \code{npm} package environment,
+we investigate the number of packages created and updated over time, as well
+as system-wide trends of dependencies within packages. In figure 1 
+[INSERT DATA COMMENTARY HERE]. Figure 2 [MORE DATA COMMENTARY].
+
+To better visualize the status of inter-package dependencies, we constructed
+a directed dependency graph using dependants as out-degrees and
+dependencies as in-degrees. Based on this dependency graph, Figure 3
+displays the percentage of packages with various amounts of dependencies. 
+[MIGHT NEED TO CHANGE BASED ON DATA: While the average number of dependencies 
+of packages continues to increase, the percentage of packages with zero 
+to three dependencies has actually increased since the end of the original paper's
+reporting period \cite{Wittern:2016}. This suggests some changes to developer 
+behaviour, likely either as a deliberate effort by programmers seeking to avoid the perils of 
+complicated dependency trees \cite{Kikas:2017}, or as a natural result of the ever-changing
+ways in which JavaScript is used for project development.
+
 \begin{figure*}
   % \includegraphics[width=.5\textwidth]{figures/highest_ranked_monthly_100.pdf}
 
