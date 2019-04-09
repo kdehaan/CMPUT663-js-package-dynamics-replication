@@ -21,11 +21,15 @@ to support them, as well as provide insight into how changes to software propaga
 
 
 
-. To that regard, some
+To that regard, some
 software ecosystems have been scientifically assessed, including the Maven [23], Apache [2], Gentoo [4], Ruby [11], and
 R [8] ecosystems. Nonetheless, a systematic literature study
 from 2013 found that research regarding real-world software
 ecosystems is lacking [14].
+
+[n/a]
+
+
 The study of characteristics and the evolution of software
 ecosystems is an end in itself, allowing to understand how
 certain technologies spread or why others fail. In addition,
@@ -34,6 +38,16 @@ and associated tooling, including technical as well as social
 aspects [26]. Furthermore, as software projects are seldom
 created in isolation, studying individual software projects
 often requires studying the ecosystem around them [3].
+
+
+Additionally, determining the characteristics of software ecosystems 
+can help clarify why some frameworks flourish while others fail, and guide 
+developers in the creation of new tools\cite{serebrenik}. Furthermore, 
+because software projects are overwhelmingly a collaborative effort, a complete
+understanding of a single project often requires knowledge of the ecosystem surrounding them[blnko].
+
+
+
 The node package manager (npm) combines a set of open
 source tools that developers use to describe their JavaScript
 packages, and specifically Node.js packages. These tools include, for example, a command line interface to create and
@@ -42,7 +56,19 @@ things, the name, description, version, and dependencies of
 a package. npm furthermore features a registry that developers can use to publish their packages, making them available
 for others to use. Packages within npm may depend on each
 other, and software projects outside of npm, for example applications, may specify dependencies to packages hosted on
-npm. Since its creation in 2009, npm has grown rapidly to now
+npm. 
+
+npm provides a set of open source tools that allow developers to 
+describe packages for Node.js, an asynchronous JavaScript runtime environment 
+designed for network applications \footnote{https://nodejs.org/en/about/}.
+The services provided by npm include a command line interface for maintaining 
+package.json files, the primary method for describing package metadata such as the name,
+description, version, and dependencies of a given package. npm also allows 
+developers to publish their packages to a public registry, permitting anyone 
+to download and use their software. Packages hosted on npm will often depend on other npm packages,
+creating an elaborate JavaScript ecosystem of interdependence.
+
+Since its creation in 2009, npm has grown rapidly to now
 feature over 230, 000 packages (as of January 28th, 2016).
 npm provides a complete set of various historic data points
 on the packages in the ecosystem. This data thus not only

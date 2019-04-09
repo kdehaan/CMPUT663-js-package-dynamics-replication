@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.4)  8 APR 2019 20:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.4)  8 APR 2019 21:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -426,44 +426,49 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 31.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
 [][][][]\OT1/ptm/m/n/8 https://insights.stackoverflow.com/survey/2016#technology-most-popular-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
 \OT1/ptm/m/n/8 technologies, https://insights.stackoverflow.com/survey/2017#technology-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
 []\OT1/ptm/m/n/8 -frameworks-libraries-and-other-technologies,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
 \OT1/ptm/m/n/8 https://insights.stackoverflow.com/survey/2018#technology-[]-frameworks-
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 35.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 36.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <9> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 35.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
+
+Underfull \hbox (badness 7397) in paragraph at lines 45--47
+[]\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---JavaScript; soft-ware ecosys-tem anal-y-sis;
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 78.
-<figures/highest_ranked_monthly_100.pdf, id=1, 1084.05pt x 1300.86pt>
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 110.
+<figures/highest_ranked_monthly_100.pdf, id=14, 1084.05pt x 1300.86pt>
 File: figures/highest_ranked_monthly_100.pdf Graphic file (type pdf)
 <use figures/highest_ranked_monthly_100.pdf>
-Package pdftex.def Info: figures/highest_ranked_monthly_100.pdf  used on input line 87.
+Package pdftex.def Info: figures/highest_ranked_monthly_100.pdf  used on input line 119.
 (pdftex.def)             Requested size: 516.0pt x 619.225pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-
-] [2 </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/highest_ranked_monthly_100.pdf>]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ® in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
@@ -480,19 +485,17 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3
-
-] (/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.aux) ) 
+[2] [3 </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/highest_ranked_monthly_100.pdf>] (/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.aux) ) 
 Here is how much of TeX's memory you used:
- 5633 strings out of 492982
- 86574 string characters out of 6134897
- 154652 words of memory out of 5000000
- 9105 multiletter control sequences out of 15000+600000
+ 5636 strings out of 492982
+ 86618 string characters out of 6134897
+ 156663 words of memory out of 5000000
+ 9108 multiletter control sequences out of 15000+600000
  47530 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,8n,42p,398b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,8n,42p,346b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf (3 pages, 144114 bytes).
+Output written on /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf (3 pages, 147348 bytes).
 PDF statistics:
  60 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream

@@ -29,14 +29,23 @@ Email: \{kdehaan,neagu,rsauveho,abram.hindle\}@ualberta.ca}
 In recent years, the tools and packages most commonly involved with JavaScript development have evolved rapidly.
 Newer packages such as Angular and React have experienced a marked increase in popularity among developers, while frameworks such as jQuery
 have begun to phase out.\footnote{\label{adoption}https://insights.stackoverflow.com/survey/2016\#technology-most-popular-technologies, 
-https://insights.stackoverflow.com/survey/2017\#technology-\_-frameworks-libraries-and-other-technologies, https://insights.stackoverflow.com/survey/2018\#technology-\_-frameworks-libraries-and-tools}
-For this reason we take a second look at a 2016 paper by Wittern, Suter and Rajagopalan \cite{Wittern:2016} to see what aspects of the JavaScript package ecosystem have changed, 
-and if previously observed trends have remained constant.
+https://insights.stackoverflow.com/survey/2017\#technology-\_-frameworks-libraries-and-other-technologies, 
+https://insights.stackoverflow.com/survey/2018\#technology-\_-frameworks-libraries-and-tools}
+For this reason we take a second look at a 2016 paper by Wittern, Suter and Rajagopalan \cite{Wittern:2016} 
+to see what aspects of the JavaScript package ecosystem have changed, and if previously observed trends have remained constant.
 In the original paper the authors use the \emph{node package manager} (\code{npm}) to gain 
-insight into the JavaScript ecosystem as a whole, and data from projects publicly hosted on \code{GitHub} to observe an alternative measure of popularity. We adhere to the same methods of analysis, and extend the data to capture
-more recent information up to April 1\textsuperscript{st} 2019.
-Ultimately, this second look aims to discover if recent years have had any significant effects on ecosystem-wide trends, and provide developers with further insight into how packages are used and evolve.
+insight into the JavaScript ecosystem as a whole, and data from projects publicly hosted on 
+\code{GitHub} to observe an alternative measure of popularity. We adhere to the same methods of analysis, 
+and extend the data to capture more recent information up to April 1\textsuperscript{st} 2019.
+Ultimately, this second look aims to discover if recent years have had any significant effects on 
+ecosystem-wide trends, and provide developers with further insight into how packages are used and evolve.
 \end{abstract}
+
+
+\begin{IEEEkeywords}
+JavaScript; software ecosystem analysis; Node.js; replication
+\end{IEEEkeywords}
+
 
 \section{Introduction}
 Software ecosystems are environments that form as projects evolve in parallel,
@@ -47,20 +56,43 @@ ecosystems form and change is important from both a software as well as a busine
 and is valuable for informing developers how technologies are used over time \cite{Serebrenik:2015}. 
 An understanding of software ecosystems can inform decisions on when to adopt frameworks and how long
 to support them, as well as provide insight into how changes to software propagate throughout the community \cite{Wittern:2016}.
+Additionally, determining the characteristics of software ecosystems 
+can help clarify why some frameworks flourish while others fail, and guide 
+developers in the creation of new tools\cite{Serebrenik:2015}. Furthermore, 
+because software projects are overwhelmingly a collaborative effort, a complete
+understanding of a single project often requires knowledge of the ecosystem supporting it\cite{Blincoe:2015}.
 
-This paper is a replication of \emph{A Look at the Dynamics of the JavaScript Package Ecosystem}\cite{Wittern:2016} that performs extensive analysis of 
-the \emph{node package manager} (\code{npm}), a popular distributor of JavaScript-based packages. Since the publishing of the original paper, the usage and scale of \code{npm} has only grown. With more than three times as many hosted packages (over 750,000 as of April 1\textsuperscript{st} 2019) 
-and over ten times as many weekly package downloads (now over ten billion per week), the raw volume of data and the complexity of package dependency graphs has increased significantly. 
-Additionally, the major frameworks used in JavaScript development have undergone a rapid transformation as packages such as Angular and React are adopted\footnotemark[\ref{adoption}].
+
+This paper is a replication of \emph{A Look at the Dynamics of the JavaScript Package Ecosystem}\cite{Wittern:2016} 
+that performs extensive analysis of the \emph{node package manager} (\code{npm}) ecosystem. 
+\code{npm} provides a set of open source tools that allow developers to 
+describe packages for \code{Node.js}, an asynchronous JavaScript runtime environment 
+designed for network applications\footnote{https://nodejs.org/en/about/}.
+The services provided by \code{npm} include a command line interface for maintaining 
+\code{package.json} files, the primary method to describe package metadata such as the name,
+description, version, and dependencies of a given package. \code{npm} also allows 
+developers to publish their packages to a public registry, permitting anyone 
+to download and use their software. Packages hosted on \code{npm} will often depend on other \code{npm}
+packages, forming an elaborate JavaScript package ecosystem.
+Since the publishing of the original paper, the usage and scale of \code{npm} has only grown,
+ and now hosts more than three times as many packages (over 750,000 as of April 1\textsuperscript{st} 2019) 
+and handles over ten times as many weekly package downloads (now over ten billion per week).
+Additionally, the major frameworks used in JavaScript development have undergone a 
+rapid transformation as packages such as Angular and React are adopted\footnotemark[\ref{adoption}].
 The core contributions we make are as follows:
 \begin{itemize}
-  \item We replicate and verify the results found in the original paper for the window of October 1\textsuperscript{st} 2010 to September 1\textsuperscript{st} 2015.
-  \item We extend the analysis to the time period of September 2\textsuperscript{nd} 2015 to April 1\textsuperscript{st} 2019, and evaluate whether patterns and trends noted in the original paper are still observable.
-  \item We investigate whether the continued evolution of the JavaScript package ecosystem has affected the relationships between various measures of package popularity.
-  \item We determine if the ongoing maturation of the JavaScript ecosystem has resulted in tangible changes to version numbering or adoption practices.
+  \item We replicate and verify the results found in the original paper for the 
+  window of October 1\textsuperscript{st} 2010 to September 1\textsuperscript{st} 2015.
+  \item We extend the analysis to the time period of September 2\textsuperscript{nd} 
+  2015 to April 1\textsuperscript{st} 2019, and evaluate whether patterns and trends 
+  noted in the original paper are still observable.
+  \item We investigate whether the continued evolution of the JavaScript package 
+  ecosystem has affected the relationships between various measures of package popularity.
+  \item We determine if the ongoing maturation of the \code{npm} ecosystem has 
+  resulted in tangible changes to version numbering or adoption practices.
 \end{itemize}
 
-\section{Related Work}
+
 
 
 \section{Data Collection}
@@ -85,7 +117,7 @@ The final data set encompasses 797,940 packages and \textbf{\#VALUE} application
   % \includegraphics[width=.5\textwidth]{figures/highest_ranked_monthly_100.pdf}
 
   \includegraphics[width=1\textwidth]{figures/highest_ranked_monthly_100.pdf}
-  \caption{Neat you can include pdfs}
+  \caption{Neat you can include PDFs}
   \label{ranksByYear}
 \end{figure*}
 
@@ -109,6 +141,8 @@ The final data set encompasses 797,940 packages and \textbf{\#VALUE} application
 
 \subsection{Adoption by Version Number}
 
+\section{Related Work}
+
 \section{Conclusion}
 
 
@@ -122,12 +156,25 @@ The final data set encompasses 797,940 packages and \textbf{\#VALUE} application
     Repositories}, MSR '15, pages 202--207, Piscataway, NJ, USA, 2015. IEEE
     Press.
   
+  \bibitem{DBLP:Decan:2018}
+  Alexandre Decan, Tom Mens, and Philippe Grosjean.
+  \newblock An empirical comparison of dependency network evolution in seven
+    software packaging ecosystems.
+  \newblock {\em CoRR}, abs/1710.04936, 2017.
+  
   \bibitem{Gousi13}
   Georgios Gousios.
   \newblock The ghtorrent dataset and tool suite.
   \newblock In {\em Proceedings of the 10th Working Conference on Mining Software
     Repositories}, MSR '13, pages 233--236, Piscataway, NJ, USA, 2013. IEEE
     Press.
+  
+  \bibitem{Kikas:2017}
+  Riivo Kikas, Georgios Gousios, Marlon Dumas, and Dietmar Pfahl.
+  \newblock Structure and evolution of package dependency networks.
+  \newblock In {\em Proceedings of the 14th International Conference on Mining
+    Software Repositories}, MSR '17, pages 102--112, Piscataway, NJ, USA, 2017.
+    IEEE Press.
   
   \bibitem{LUNGU2010264}
   Mircea Lungu, Michele Lanza, Tudor Gîrba, and Romain Robbes.
@@ -147,6 +194,11 @@ The final data set encompasses 797,940 packages and \textbf{\#VALUE} application
   \newblock {\em Software Ecosystem: Understanding an Indispensable Technology
     and Industry}.
   \newblock 01 2003.
+  
+  \bibitem{DBLP:PanoGA16}
+  Amantia Pano, Daniel Graziotin, and Pekka Abrahamsson.
+  \newblock What leads developers towards the choice of a javascript framework?
+  \newblock {\em CoRR}, abs/1605.04303, 2016.
   
   \bibitem{Manikas:2017}
   M.~{Seppänen}, S.~{Hyrynsalmi}, K.~{Manikas}, and A.~{Suominen}.
