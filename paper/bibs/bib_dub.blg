@@ -3,46 +3,46 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: bib_dub.aux
 The style file: plain.bst
 Database file #1: refs.bib
-Warning--empty publisher in book
-You've used 8 entries,
+Warning--empty publisher in Messerschmitt
+You've used 11 entries,
             2118 wiz_defined-function locations,
-            560 strings with 5731 characters,
-and the built_in function-call counts, 3410 in all, are:
-= -- 358
-> -- 128
-< -- 5
-+ -- 53
-- -- 42
-* -- 230
-:= -- 518
-add.period$ -- 29
-call.type$ -- 8
-change.case$ -- 44
+            581 strings with 6368 characters,
+and the built_in function-call counts, 4494 in all, are:
+= -- 468
+> -- 187
+< -- 6
++ -- 77
+- -- 62
+* -- 302
+:= -- 702
+add.period$ -- 39
+call.type$ -- 11
+change.case$ -- 63
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 147
-empty$ -- 275
-format.name$ -- 42
-if$ -- 762
+cite$ -- 12
+duplicate$ -- 190
+empty$ -- 348
+format.name$ -- 62
+if$ -- 991
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 9
-newline$ -- 44
-num.names$ -- 16
-pop$ -- 48
+int.to.str$ -- 11
+missing$ -- 12
+newline$ -- 59
+num.names$ -- 22
+pop$ -- 63
 preamble$ -- 1
-purify$ -- 37
+purify$ -- 53
 quote$ -- 0
-skip$ -- 116
+skip$ -- 150
 stack$ -- 0
-substring$ -- 249
-swap$ -- 52
-text.length$ -- 5
+substring$ -- 297
+swap$ -- 64
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 30
+type$ -- 42
 warning$ -- 1
-while$ -- 33
-width$ -- 9
-write$ -- 102
+while$ -- 42
+width$ -- 13
+write$ -- 138
 (There was 1 warning)

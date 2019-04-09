@@ -4,7 +4,10 @@
 Software ecosystems consist of software projects that are
 developed and evolve together in a shared environment [13].
 Research on such ecosystems only recently emerged within
-software engineering [15]. 
+software engineering [15]. It addresses, among other things,
+the analysis of the characteristics and evolution of software
+ecosystems, which some researchers consider to be a central
+subject in this field of research [26]
 
 Software ecosystems are environments that form as projects evolve in parallel,
 becoming interconnected as contexts and dependencies span companies and communities [13]. 
@@ -18,10 +21,7 @@ to support them, as well as provide insight into how changes to software propaga
 
 
 
- It addresses, among other things,
-the analysis of the characteristics and evolution of software
-ecosystems, which some researchers consider to be a central
-subject in this field of research [26]. To that regard, some
+. To that regard, some
 software ecosystems have been scientifically assessed, including the Maven [23], Apache [2], Gentoo [4], Ruby [11], and
 R [8] ecosystems. Nonetheless, a systematic literature study
 from 2013 found that research regarding real-world software

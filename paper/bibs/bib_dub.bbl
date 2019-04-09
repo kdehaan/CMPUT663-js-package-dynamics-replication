@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Blincoe:2015}
 Kelly Blincoe, Francis Harrison, and Daniela Damian.
@@ -8,12 +8,25 @@ Kelly Blincoe, Francis Harrison, and Daniela Damian.
   Repositories}, MSR '15, pages 202--207, Piscataway, NJ, USA, 2015. IEEE
   Press.
 
+\bibitem{DBLP:Decan:2018}
+Alexandre Decan, Tom Mens, and Philippe Grosjean.
+\newblock An empirical comparison of dependency network evolution in seven
+  software packaging ecosystems.
+\newblock {\em CoRR}, abs/1710.04936, 2017.
+
 \bibitem{Gousi13}
 Georgios Gousios.
 \newblock The ghtorrent dataset and tool suite.
 \newblock In {\em Proceedings of the 10th Working Conference on Mining Software
   Repositories}, MSR '13, pages 233--236, Piscataway, NJ, USA, 2013. IEEE
   Press.
+
+\bibitem{Kikas:2017}
+Riivo Kikas, Georgios Gousios, Marlon Dumas, and Dietmar Pfahl.
+\newblock Structure and evolution of package dependency networks.
+\newblock In {\em Proceedings of the 14th International Conference on Mining
+  Software Repositories}, MSR '17, pages 102--112, Piscataway, NJ, USA, 2017.
+  IEEE Press.
 
 \bibitem{LUNGU2010264}
 Mircea Lungu, Michele Lanza, Tudor Gîrba, and Romain Robbes.
@@ -28,13 +41,18 @@ Konstantinos Manikas and Klaus~Marius Hansen.
 \newblock Software ecosystems - a systematic literature review.
 \newblock {\em J. Syst. Softw.}, 86(5):1294--1306, May 2013.
 
-\bibitem{book}
+\bibitem{Messerschmitt}
 David Messerschmitt and Clemens Szyperski.
 \newblock {\em Software Ecosystem: Understanding an Indispensable Technology
   and Industry}.
 \newblock 01 2003.
 
-\bibitem{8244229}
+\bibitem{DBLP:PanoGA16}
+Amantia Pano, Daniel Graziotin, and Pekka Abrahamsson.
+\newblock What leads developers towards the choice of a javascript framework?
+\newblock {\em CoRR}, abs/1605.04303, 2016.
+
+\bibitem{Manikas:2017}
 M.~{Seppänen}, S.~{Hyrynsalmi}, K.~{Manikas}, and A.~{Suominen}.
 \newblock Yet another ecosystem literature review: 10+1 research communities.
 \newblock In {\em 2017 IEEE European Technology and Engineering Management
