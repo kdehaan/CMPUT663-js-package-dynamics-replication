@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.4)  8 APR 2019 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.4)  9 APR 2019 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -43,25 +43,25 @@ Missing character: There is no Ã in font cmr10!
 Missing character: There is no ® in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¤ in font cmr10!
-) [1
+ [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) [2]
 (./bib_dub.aux) ) 
 Here is how much of TeX's memory you used:
- 221 strings out of 492982
- 2403 string characters out of 6134897
+ 222 strings out of 492982
+ 2415 string characters out of 6134897
  58922 words of memory out of 5000000
- 3867 multiletter control sequences out of 15000+600000
+ 3868 multiletter control sequences out of 15000+600000
  4591 words of font info for 17 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,4n,17p,127b,135s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23i,4n,17p,127b,201s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on bib_dub.pdf (1 page, 53163 bytes).
+Output written on bib_dub.pdf (2 pages, 53802 bytes).
 PDF statistics:
- 20 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 23 PDF objects out of 1000 (max. 8388607)
+ 15 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -47,6 +47,12 @@ David Messerschmitt and Clemens Szyperski.
   and Industry}.
 \newblock 01 2003.
 
+\bibitem{Myers:2003}
+Christopher~R. Myers.
+\newblock Software systems as complex networks: Structure, function, and
+  evolvability of software collaboration graphs.
+\newblock {\em Phys. Rev. E}, 68:046116, Oct 2003.
+
 \bibitem{DBLP:PanoGA16}
 Amantia Pano, Daniel Graziotin, and Pekka Abrahamsson.
 \newblock What leads developers towards the choice of a javascript framework?
