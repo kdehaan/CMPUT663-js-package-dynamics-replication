@@ -165,7 +165,7 @@ to three dependencies has actually increased since the end of the original paper
 reporting period \cite{Wittern:2016}. This suggests some changes to developer 
 behaviour, likely either as a deliberate effort by programmers seeking to avoid the perils of 
 complicated dependency trees \cite{Kikas:2017}, or as a natural result of the ever-changing
-ways in which JavaScript is used for project development.
+ways in which JavaScript is used for project development. [ADD EXACT VALUES]
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{figures/npm_deps_monthly_out_degree.pdf}
@@ -181,15 +181,10 @@ ways in which JavaScript is used for project development.
 
 
 
-\begin{figure*}
-  % \includegraphics[width=.5\textwidth]{figures/highest_ranked_monthly_100.pdf}
-
-  \includegraphics[width=1\textwidth]{figures/highest_ranked_monthly_100.pdf}
-  \caption{Neat you can include PDFs}
-  \label{ranksByYear}
-\end{figure*}
 
 \section{Package Popularity}
+
+
 
 \subsection{Relationships between Measures}
 
@@ -197,9 +192,22 @@ ways in which JavaScript is used for project development.
 
 \subsection{Popularity Over Time}
 
+
 \subsubsection{Identifying Top Packages}
 
 \subsubsection{Popular Package Dynamics}
+
+\begin{figure*}
+  \includegraphics[width=1\textwidth]{figures/highest_ranked.pdf}
+  \caption{\code{npm} rank (based on pagerank) of five packages with the lowest geometric mean per year}
+  \label{ranksByYear}
+\end{figure*}
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{figures/highest_ranked.pdf}
+  \caption{\code{npm} rank (based on pagerank) of five packages with the lowest geometric mean per year}
+  \label{ranksByYear}
+\end{figure*}
 
 \subsubsection{Comparing Popularities}
 
