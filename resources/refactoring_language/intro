@@ -156,17 +156,6 @@ or more dependencies has increased from 23.4% in January
 been a steady increase in the number of packages with 6 or
 more dependencies, starting with 0% in January 2011 and
 reaching 32.5% by end of August 2015.
-Given the increasing number of external dependencies per
-package, we tried to understand whether such dependencies 
-were spread equally across all packages or if they were
-confined to just a limited set of packages. To answer this
-question, we look at Figure 4, showing the distribution of
-in degrees across all packages. At the end of August 2015,
-72.5% of packages had no incoming dependency, i.e., they
-had no dependent packages, while only 4.9% of packages had
-6 or more dependents, up from 1.1% in January 2011. Such
-uneven distribution of package dependencies has been previously 
-observed in other software ecosystems as well [18].
 
 To better visualize the status of inter-package dependencies, we constructed
 a directed dependency graph using dependants as out-degrees and
@@ -179,6 +168,25 @@ reporting period \cite{Wittern:2016}. This suggests some changes to developer
 behaviour, either deliberately as programmers seek to avoid the perils of 
 complicated dependency trees \cite{Kikas}, or as a natural result of the ever-changing
 ways in which JavaScript is used for project development.
+
+
+
+Given the increasing number of external dependencies per
+package, we tried to understand whether such dependencies 
+were spread equally across all packages or if they were
+confined to just a limited set of packages. To answer this
+question, we look at Figure 4, showing the distribution of
+in degrees across all packages. At the end of August 2015,
+72.5% of packages had no incoming dependency, i.e., they
+had no dependent packages, while only 4.9% of packages had
+6 or more dependants, up from 1.1% in January 2011. Such
+uneven distribution of package dependencies has been previously 
+observed in other software ecosystems as well [18].
+
+In addition to the number of external dependencies per package, 
+we investigate how packages support dependants. The original paper 
+discovered that 
+
 
 
 
