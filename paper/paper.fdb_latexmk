@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1554852760 "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.tex" "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf" "paper" 1554852885
+["pdflatex"] 1554854891 "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.tex" "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf" "paper" 1554854918
   "/etc/texmf/web2c/texmf.cnf" 1541795479 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.aux" 1554852761 2683 c354d1014605a44a72d12fc6546383ce ""
-  "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.tex" 1554852884 12628 01155689b17de0fa3e8a2d6018db5cf5 ""
+  "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.aux" 1554854891 3216 2193a76118d834b0f7dc9cdd72b7784f ""
+  "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.tex" 1554854918 13769 4eb16a008cf2700cc9b5e43670ad74b5 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrb7t.tfm" 1480098688 960 4ab65358b8406f30ef5496c8c096d22b ""
@@ -90,6 +90,9 @@
   "/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty" 1480098830 2594 d18d5e19aa8239cf867fa670c556d2e9 ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty" 1480098830 3980 0a268fbfda01e381fa95821ab13b6aee ""
   "/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1480098833 678 4792914a8f45be57bb98413425e4c7af ""
+  "/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg" 1480098833 1827 d72ad54409ca5c1068a1939c63441bd2 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty" 1480098833 80336 ff90c926c3d7bfdaa3d80ca57123b0bb ""
+  "/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty" 1480098833 77028 c3eb00afb55a32bc13ca8da7f5234377 ""
   "/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty" 1480098836 12095 5337833c991d80788a43d3ce26bd1c46 ""
   "/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty" 1480098836 7075 2fe3d848bba95f139de11ded085e74aa ""
   "/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty" 1480098836 22417 1d9df1eb66848aa31b18a593099cf45c ""
@@ -104,11 +107,13 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1549318994 4128984 716faea38c6a9b8d387d0c1dc6a04540 ""
   "IEEEtran.cls" 1549261167 288304 b67b6fc6c2abb39f9b461923f5199343 ""
   "figures/highest_ranked_monthly_100.pdf" 1554759015 75676 dcc81ba55ae9055d012ec239051710a4 ""
-  "paper.aux" 1554852761 2683 c354d1014605a44a72d12fc6546383ce ""
-  "paper.tex" 1554852884 12628 01155689b17de0fa3e8a2d6018db5cf5 ""
+  "figures/npm_deps_monthly_in_degree.pdf" 1554854470 46647 e6557e6d034f6967a7b69495ca827f01 ""
+  "figures/npm_deps_monthly_out_degree.pdf" 1554854470 54869 72097d4ac49eb78ffce0d282dceebce8 ""
+  "paper.aux" 1554854891 3216 2193a76118d834b0f7dc9cdd72b7784f ""
+  "paper.tex" 1554854918 13769 4eb16a008cf2700cc9b5e43670ad74b5 ""
   (generated)
   "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf"
   "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.log"
-  "paper.log"
   "paper.pdf"
   "paper.aux"
+  "paper.log"
