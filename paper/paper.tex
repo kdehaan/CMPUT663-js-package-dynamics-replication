@@ -157,7 +157,7 @@ as system-wide trends of dependencies within packages. In figure 1
 
 To better visualize the status of inter-package dependencies, we constructed
 a directed dependency graph using dependants as out-degrees and
-dependencies as in-degrees. Based on this dependency graph, Figure \ref{outDegree}
+dependencies as in-degrees. Based on this graph, Figure \ref{outDegree}
 displays the percentage of packages with various amounts of dependencies. 
 [MIGHT NEED TO CHANGE BASED ON DATA: While the average number of dependencies 
 of packages continues to increase, the percentage of packages with zero 
@@ -207,11 +207,18 @@ paper \cite{Wittern:2016}.
 
 \subsubsection{Identifying Top Packages}
 
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{figures/geo_mean_highest_pagerank.pdf}
+  \caption{\code{npm} rank (PageRank) of the five packages with the lowest overall geometric mean}
+  \label{outDegree}
+\end{figure}
+
+
 \subsubsection{Popular Package Dynamics}
 
 \begin{figure*}
   \includegraphics[width=1\textwidth]{figures/highest_ranked.pdf}
-  \caption{\code{npm} rank (based on PageRank) of five packages with the lowest geometric mean per year}
+  \caption{\code{npm} rank (PageRank) of the five packages each year with the lowest geometric}
   \label{ranksByYear}
 \end{figure*}
 
