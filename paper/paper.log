@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.4)  9 APR 2019 18:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.4)  9 APR 2019 18:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -481,24 +481,42 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 
 
 ]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 131.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
-File: omlptm.fd 
-)
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 131.
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
 (Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 139.
-<figures/highest_ranked_monthly_100.pdf, id=14, 1084.05pt x 1300.86pt>
+<figures/npm_deps_monthly_out_degree.pdf, id=14, 505.89pt x 379.4175pt>
+File: figures/npm_deps_monthly_out_degree.pdf Graphic file (type pdf)
+<use figures/npm_deps_monthly_out_degree.pdf>
+Package pdftex.def Info: figures/npm_deps_monthly_out_degree.pdf  used on input line 171.
+(pdftex.def)             Requested size: 258.0pt x 193.50035pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 171--172
+[][] 
+ []
+
+<figures/npm_deps_monthly_in_degree.pdf, id=15, 505.89pt x 379.4175pt>
+File: figures/npm_deps_monthly_in_degree.pdf Graphic file (type pdf)
+<use figures/npm_deps_monthly_in_degree.pdf>
+Package pdftex.def Info: figures/npm_deps_monthly_in_degree.pdf  used on input line 177.
+(pdftex.def)             Requested size: 258.0pt x 193.50035pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 177--178
+[][] 
+ []
+
+<figures/highest_ranked_monthly_100.pdf, id=16, 1084.05pt x 1300.86pt>
 File: figures/highest_ranked_monthly_100.pdf Graphic file (type pdf)
 <use figures/highest_ranked_monthly_100.pdf>
-Package pdftex.def Info: figures/highest_ranked_monthly_100.pdf  used on input line 173.
+Package pdftex.def Info: figures/highest_ranked_monthly_100.pdf  used on input line 187.
 (pdftex.def)             Requested size: 516.0pt x 619.225pt.
+[2 </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/npm_deps_monthly_out_degree.pdf> </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/npm_deps_monthly_in_degree.pdf
+
+pdfTeX warning: pdflatex (file /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/npm_deps_monthly_in_degree.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [3 </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/highest_ranked_monthly_100.pdf>]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ® in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
- [2] [3 </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/highest_ranked_monthly_100.pdf>]
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -514,18 +532,18 @@ Before submitting the final camera ready copy, remember to:
 
 ] (/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.aux) ) 
 Here is how much of TeX's memory you used:
- 6833 strings out of 492982
- 104310 string characters out of 6134897
- 194192 words of memory out of 5000000
- 10290 multiletter control sequences out of 15000+600000
- 47530 words of font info for 101 fonts, out of 8000000 for 9000
+ 6830 strings out of 492982
+ 104516 string characters out of 6134897
+ 194216 words of memory out of 5000000
+ 10287 multiletter control sequences out of 15000+600000
+ 48045 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,8n,42p,346b,1125s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf (4 pages, 158308 bytes).
+ 44i,8n,42p,346b,912s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf (4 pages, 187319 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -9,7 +9,7 @@
 \usepackage{xcolor}
 \usepackage{subfig}
 \usepackage{listings}
-\lstset{numbers=left,stepnumber=1,}
+\lstset{numbers=left,stepnumber=1,basicstyle=\footnotesize\ttfamily}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     \def\code#1{\texttt{#1}}
@@ -157,7 +157,7 @@ as system-wide trends of dependencies within packages. In figure 1
 
 To better visualize the status of inter-package dependencies, we constructed
 a directed dependency graph using dependants as out-degrees and
-dependencies as in-degrees. Based on this dependency graph, Figure 3
+dependencies as in-degrees. Based on this dependency graph, Figure \ref{outDegree}
 displays the percentage of packages with various amounts of dependencies. 
 [MIGHT NEED TO CHANGE BASED ON DATA: While the average number of dependencies 
 of packages continues to increase, the percentage of packages with zero 
@@ -166,6 +166,20 @@ reporting period \cite{Wittern:2016}. This suggests some changes to developer
 behaviour, likely either as a deliberate effort by programmers seeking to avoid the perils of 
 complicated dependency trees \cite{Kikas:2017}, or as a natural result of the ever-changing
 ways in which JavaScript is used for project development.
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{figures/npm_deps_monthly_out_degree.pdf}
+  \caption{\code{npm} packages by their number of dependencies on other packages}
+  \label{outDegree}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{figures/npm_deps_monthly_in_degree.pdf}
+  \caption{\code{npm} packages by the number of other packages depending on them}
+  \label{inDegree}
+\end{figure}
+
+
 
 \begin{figure*}
   % \includegraphics[width=.5\textwidth]{figures/highest_ranked_monthly_100.pdf}
