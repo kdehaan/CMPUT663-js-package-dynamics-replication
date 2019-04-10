@@ -167,6 +167,19 @@ behaviour, likely either as a deliberate effort by programmers seeking to avoid 
 complicated dependency trees \cite{Kikas:2017}, or as a natural result of the ever-changing
 ways in which JavaScript is used for project development. [ADD EXACT VALUES]
 
+In addition to the number of external dependencies per package, 
+we investigate how packages support dependants. The original paper 
+discovered that the majority of in degrees are concentrated among a core 
+minority of packages, with the majority of packages having no dependants,
+a discovery that has also been observed in other software ecosystems such
+as Linux and MySQL \cite{Myers:2003}. In our updated data, we discover 
+that not only have these aspects held true, but the concentration of 
+dependencies has actually increased. As of April 1\textsuperscript{st} 2019, [NUMBER]\% of packages
+had zero dependants, up from [NUMBER]\% in 2015. Meanwhile, only \%[NUMBER] of packages
+had 6 or more dependants, down from \%[NUMBER] in September 2015. It is again interesting to note
+that the current trend of increasing concentration appears to have begun shortly after the end of window in the original
+paper \cite{Wittern:2016}.
+
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{figures/npm_deps_monthly_out_degree.pdf}
   \caption{\code{npm} packages by their number of dependencies on other packages}
@@ -192,24 +205,23 @@ ways in which JavaScript is used for project development. [ADD EXACT VALUES]
 
 \subsection{Popularity Over Time}
 
-
 \subsubsection{Identifying Top Packages}
 
 \subsubsection{Popular Package Dynamics}
 
 \begin{figure*}
   \includegraphics[width=1\textwidth]{figures/highest_ranked.pdf}
-  \caption{\code{npm} rank (based on pagerank) of five packages with the lowest geometric mean per year}
-  \label{ranksByYear}
-\end{figure*}
-
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{figures/highest_ranked.pdf}
-  \caption{\code{npm} rank (based on pagerank) of five packages with the lowest geometric mean per year}
+  \caption{\code{npm} rank (based on PageRank) of five packages with the lowest geometric mean per year}
   \label{ranksByYear}
 \end{figure*}
 
 \subsubsection{Comparing Popularities}
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{figures/select_packages.png}
+  \caption{\code{npm} rank (PageRank) over time of selected utility packages}
+  \label{selectPackages}
+\end{figure}
 
 \section{Version Numbering and Package Adoption}
 
@@ -271,6 +283,12 @@ ways in which JavaScript is used for project development. [ADD EXACT VALUES]
     and Industry}.
   \newblock 01 2003.
   
+  \bibitem{Myers:2003}
+  Christopher~R. Myers.
+  \newblock Software systems as complex networks: Structure, function, and
+    evolvability of software collaboration graphs.
+  \newblock {\em Phys. Rev. E}, 68:046116, Oct 2003.
+  
   \bibitem{DBLP:PanoGA16}
   Amantia Pano, Daniel Graziotin, and Pekka Abrahamsson.
   \newblock What leads developers towards the choice of a javascript framework?
@@ -295,7 +313,6 @@ ways in which JavaScript is used for project development. [ADD EXACT VALUES]
   \newblock In {\em Proceedings of the 13th International Conference on Mining
     Software Repositories}, MSR '16, pages 351--361, New York, NY, USA, 2016.
     ACM.
-  
   \end{thebibliography}
   
 \vspace{12pt}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.4)  9 APR 2019 18:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.4)  9 APR 2019 19:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -469,9 +469,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--35
 \OT1/ptm/m/n/8 https://insights.stackoverflow.com/survey/2018#technology-[]-frameworks-
  []
 
-
-LaTeX Warning: Citation `Wittern:2016' on page 1 undefined on input line 36.
-
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 38.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -480,119 +477,48 @@ LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <9> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 38.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
-
-
-LaTeX Warning: Citation `LUNGU2010264' on page 1 undefined on input line 54.
-
-
-LaTeX Warning: Citation `Manikas:2017' on page 1 undefined on input line 55.
-
-
-LaTeX Warning: Citation `Manikas:2013' on page 1 undefined on input line 56.
-
-
-LaTeX Warning: Citation `Messerschmitt' on page 1 undefined on input line 57.
-
-
-LaTeX Warning: Citation `Serebrenik:2015' on page 1 undefined on input line 58.
-
-
-LaTeX Warning: Citation `Wittern:2016' on page 1 undefined on input line 60.
-
-
-LaTeX Warning: Citation `Serebrenik:2015' on page 1 undefined on input line 63.
-
-
-LaTeX Warning: Citation `Blincoe:2015' on page 1 undefined on input line 65.
-
-
-LaTeX Warning: Citation `Wittern:2016' on page 1 undefined on input line 68.
-
-/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.tex:83: Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.83 ...t are adopted\footnotemark[\ref{adoption}]
-                                                  .
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-LaTeX Warning: Reference `adoption' on page 1 undefined on input line 83.
-
-
-LaTeX Warning: Citation `Gousi13' on page 1 undefined on input line 105.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
 (Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 139.
-
-
-LaTeX Warning: Citation `Wittern:2016' on page 2 undefined on input line 147.
-
-
-LaTeX Warning: Reference `outDegree' on page 2 undefined on input line 160.
-
-
-LaTeX Warning: Citation `Wittern:2016' on page 2 undefined on input line 165.
-
-
-LaTeX Warning: Citation `Kikas:2017' on page 2 undefined on input line 167.
-
 <figures/npm_deps_monthly_out_degree.pdf, id=14, 505.89pt x 379.4175pt>
 File: figures/npm_deps_monthly_out_degree.pdf Graphic file (type pdf)
 <use figures/npm_deps_monthly_out_degree.pdf>
-Package pdftex.def Info: figures/npm_deps_monthly_out_degree.pdf  used on input line 171.
+Package pdftex.def Info: figures/npm_deps_monthly_out_degree.pdf  used on input line 184.
 (pdftex.def)             Requested size: 258.0pt x 193.50035pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 171--172
+Overfull \hbox (6.0pt too wide) in paragraph at lines 184--185
 [][] 
  []
 
 <figures/npm_deps_monthly_in_degree.pdf, id=15, 505.89pt x 379.4175pt>
 File: figures/npm_deps_monthly_in_degree.pdf Graphic file (type pdf)
 <use figures/npm_deps_monthly_in_degree.pdf>
-Package pdftex.def Info: figures/npm_deps_monthly_in_degree.pdf  used on input line 177.
+Package pdftex.def Info: figures/npm_deps_monthly_in_degree.pdf  used on input line 190.
 (pdftex.def)             Requested size: 258.0pt x 193.50035pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 177--178
+Overfull \hbox (6.0pt too wide) in paragraph at lines 190--191
 [][] 
  []
 
 <figures/highest_ranked.pdf, id=16, 1084.05pt x 1300.86pt>
 File: figures/highest_ranked.pdf Graphic file (type pdf)
 <use figures/highest_ranked.pdf>
-Package pdftex.def Info: figures/highest_ranked.pdf  used on input line 201.
+Package pdftex.def Info: figures/highest_ranked.pdf  used on input line 213.
 (pdftex.def)             Requested size: 516.0pt x 619.225pt.
-File: figures/highest_ranked.pdf Graphic file (type pdf)
-<use figures/highest_ranked.pdf>
-Package pdftex.def Info: figures/highest_ranked.pdf  used on input line 207.
-(pdftex.def)             Requested size: 258.0pt x 309.59265pt.
+<figures/select_packages.png, id=17, 361.35pt x 271.0125pt>
+File: figures/select_packages.png Graphic file (type png)
+<use figures/select_packages.png>
+Package pdftex.def Info: figures/select_packages.png  used on input line 221.
+(pdftex.def)             Requested size: 258.0pt x 193.49953pt.
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 207--208
+Overfull \hbox (6.0pt too wide) in paragraph at lines 221--222
 [][] 
  []
 
-
-/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.tex:210: LaTeX Error: \begin{figure} on input line 206 ended by \end{figure*}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.210 \end{figure*}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[2 </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/npm_deps_monthly_out_degree.pdf> </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/npm_deps_monthly_in_degree.pdf
-
-pdfTeX warning: pdflatex (file /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/npm_deps_monthly_in_degree.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [3 </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/highest_ranked.pdf>]
+[2 </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/npm_deps_monthly_out_degree.pdf>]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ® in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
@@ -609,27 +535,22 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4] (/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.aux)
+[3 </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/npm_deps_monthly_in_degree.pdf>] [4 </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/highest_ranked.pdf>] [5
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/select_packages.png>] (/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.aux) ) 
 Here is how much of TeX's memory you used:
- 6830 strings out of 492982
- 104456 string characters out of 6134897
- 194141 words of memory out of 5000000
- 10287 multiletter control sequences out of 15000+600000
+ 6838 strings out of 492982
+ 104634 string characters out of 6134897
+ 194228 words of memory out of 5000000
+ 10293 multiletter control sequences out of 15000+600000
  48045 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,8n,42p,346b,912s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf (4 pages, 188048 bytes).
+Output written on /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf (5 pages, 224520 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

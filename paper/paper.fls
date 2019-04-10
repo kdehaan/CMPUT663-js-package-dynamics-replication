@@ -194,8 +194,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
@@ -212,8 +210,11 @@ INPUT /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/
 INPUT /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/highest_ranked.pdf
 INPUT /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/highest_ranked.pdf
 INPUT /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/highest_ranked.pdf
-INPUT /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/highest_ranked.pdf
-INPUT /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/highest_ranked.pdf
+INPUT /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/select_packages.png
+INPUT /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/select_packages.png
+INPUT /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/select_packages.png
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/courier/pcrro7t.vf
