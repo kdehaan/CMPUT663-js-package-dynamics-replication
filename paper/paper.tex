@@ -138,7 +138,15 @@ The final data set encompasses 797,940 packages and \textbf{\#VALUE} application
 
 \subsection{Applications using \code{npm} Packages}
 
-\textbf{@Greg I'm gonna need you to put something here}
+\textbf{
+To collect our data for this project, we turned to multiple important data repositories. We used the GHTorrent public set [ref number], as well as the actual GitHub platform, and the npm repository. Using this data, we will further determine the popularity of packages by popularity metrics such as pagerank and download rank. 
+
+Firstly, using the public online data set GHTorrent [ref num], we skimmed all projects and pulled those written in JavaScript. This resulted in a total of 9,017,221 repositories which were written in Javascript. It is important to note though that simply being written in JavaScript is not adequate. To find the correct repositories that implemented npm Packages, we looked for repositories that contained a package.json file, as elaborated earlier. This criteria is important, as it only holds true for projects utilizing npm packages. With this criteria, we then compiled a list of [100,000 for now] project repositories from GitHub, as we felt that this was an appropriate amount of repositories to be representative of the rest of the projects. 
+    
+    Using the GitHub platform api and the list of valid repository names from before, we cloned the GitHub repository for each project. With this, we were then able to determine the date and time of every commit of the project, as well as the list of included npm packages at the time of commit, as listed in every commit version of package.json. The results showed that on average a repository had 37.9 commits as well as [STATS HERE]
+
+    While there are a total of 9,017,221 repositories written in JavaScript, it is important to note that not all utilized npm packages, as evident by the lack of a package.json file in some repositories. As such, we screened for such repositories that did utilize npm packages. FInally, we pulled 100,000 repositories from those repositories as well felt this was representative sample size for the analysis.
+}
 
 \section{Ecosystem Evolution}
 
