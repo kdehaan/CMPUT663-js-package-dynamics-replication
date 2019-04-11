@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1554962915 "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.tex" "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf" "paper" 1554962915
+["pdflatex"] 1554964174 "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.tex" "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf" "paper" 1554964175
   "/etc/texmf/web2c/texmf.cnf" 1541795479 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.aux" 1554962915 3948 0a40eaffebf9a0754f59ac885b58e957 ""
-  "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.tex" 1554962913 18223 ebee4449eaaa4b7dacc2886b4479f61a ""
+  "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.aux" 1554964174 3948 0a40eaffebf9a0754f59ac885b58e957 ""
+  "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.tex" 1554964173 18242 05372f87492de62788f77c74fe985a5b ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrb7t.tfm" 1480098688 960 4ab65358b8406f30ef5496c8c096d22b ""
@@ -112,11 +112,11 @@
   "figures/npm_deps_monthly_in_degree.pdf" 1554854470 46647 e6557e6d034f6967a7b69495ca827f01 ""
   "figures/npm_deps_monthly_out_degree.pdf" 1554854470 54869 72097d4ac49eb78ffce0d282dceebce8 ""
   "figures/select_packages.png" 1554859810 42392 ea4be1173b26157a90d33d400fcf83c0 ""
-  "paper.aux" 1554962915 3948 0a40eaffebf9a0754f59ac885b58e957 ""
-  "paper.tex" 1554962913 18223 ebee4449eaaa4b7dacc2886b4479f61a ""
+  "paper.aux" 1554964174 3948 0a40eaffebf9a0754f59ac885b58e957 ""
+  "paper.tex" 1554964173 18242 05372f87492de62788f77c74fe985a5b ""
   (generated)
-  "paper.pdf"
   "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf"
-  "paper.aux"
-  "paper.log"
   "/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.log"
+  "paper.aux"
+  "paper.pdf"
+  "paper.log"

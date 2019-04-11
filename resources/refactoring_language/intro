@@ -216,3 +216,69 @@ depended upon is only 27.5% of overall packages in npm,
 indicating that package dependencies exhibit a power law 
 distribution, as has been observed by prior research on 
 software related artifacts and ecosystems [12, 18].
+
+[todo ^^^^]
+
+
+
+
+
+Empirical analysis of software ecosystems is an important
+aspect of software ecosystem research as a whole [26]. 
+Correspondingly, related work focuses on specific aspects like
+visualization [13], depicting ecosystem maturity [1], or how
+to aggregate software quality metrics [17].
+Some works empirically analyze software ecosystems that
+evolve around a specific programming languages, as we did
+for npm. Raemaekers et al. present a crawled dataset containing 
+basic metrics, dependencies, and changes with some
+aggregate statistics about Maven, a popular package manager
+for Java [23]. Another work runs software to identify bugs in
+source code of libraries shared in the same ecosystem [16]. In
+contrast to these works, our study of the npm ecosystem focuses 
+on the ecosystem evolution, popularity measures, and
+package versioning. An analysis of the statistical computing 
+project R [8] finds a super-linear growth in packages as
+we report in Section 3. In addition, the study focuses on
+characterizing contributions to user-contributed versus core
+packages. We refrain from running a similar analysis as npm
+does not differentiate packages explicitly in such a way, 
+although we did identify different types of packages based on
+our analysis of popularity measures (see Section 4.2). In [11],
+the authors present results of a quantitative study of the
+Ruby ecosystem. The paper presents a graph visualization
+of the whole ecosystem as well as some descriptive statistics
+and histograms about selected characteristics of packages,
+including downloads and package size. In contrast to our
+work, the dataset is much smaller, having only around 10K
+gem nodes and 13.1K dependencies. Furthermore, the paper
+does not go into the dynamics of the ecosystem, considering
+instead a single point in time. We did not find any published
+empirical analyses of the npm ecosystem.
+Some works have studied the evolution of versions and corresponding 
+change of software projects. For example, in a recent empirical 
+study [5] regarding two ecosystems (including
+npm) the authors find that developers struggle with changing 
+versions as they might break dependent code. Similar
+assessments on the effects of changes have been made regarding 
+the Apache ecosystem [2] or the Maven ecosystem [24].
+In contrast to these works, we assess versions in npm from a
+black-box perspective: we do not assess how version changes
+are reflected in the implementation of individual packages,
+but focus on the occurrence of version numbers and how
+they are adopted by application developers.
+Finally, npm has occasionally been analyzed out of the context 
+of peer-reviewed venues. npm packages pagerank provides a 
+keyword-based search for packages, and presents the
+results as recommendations based on their PageRank [21].
+While we also consider the PageRank as a possible popularity 
+measure, we have shown that this metric may not be
+adequate for packages most useful to application developers
+(Section 4.2). The project npm by numbers analyses a
+snapshot of the npm ecosystem from September 2015 and
+presents various statistics on it, including the distribution
+of version numbers and releases of packages and the 
+dependencies between packages [25]. In contrast to our work, npm
+by numbers considers only a single point in time, whereas
+we focus on the evolution of the ecosystem, and provides no
+insight derived from client applications.
