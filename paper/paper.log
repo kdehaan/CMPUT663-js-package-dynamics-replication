@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.4)  11 APR 2019 00:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.2.4)  11 APR 2019 00:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -498,8 +498,6 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 171--173
 [][] 
  []
 
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no § in font ptmr7t!
 [2 </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/new_vs_updates_by_month.pdf>]
 <figures/npm_deps_monthly_out_degree.pdf, id=26, 505.89pt x 379.4175pt>
 File: figures/npm_deps_monthly_out_degree.pdf Graphic file (type pdf)
@@ -571,15 +569,15 @@ Before submitting the final camera ready copy, remember to:
 
 [5 </home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/figures/select_packages.png>] (/home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.aux) ) 
 Here is how much of TeX's memory you used:
- 6850 strings out of 492982
- 105084 string characters out of 6134897
+ 6851 strings out of 492982
+ 105092 string characters out of 6134897
  194244 words of memory out of 5000000
- 10303 multiletter control sequences out of 15000+600000
+ 10304 multiletter control sequences out of 15000+600000
  48045 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,8n,42p,346b,912s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf (5 pages, 230811 bytes).
+Output written on /home/kdehaan/repositories/CMPUT663-js-package-dynamics-replication/paper/paper.pdf (5 pages, 231006 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream
