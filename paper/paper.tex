@@ -142,6 +142,13 @@ The final data set encompasses 797,940 packages and \textbf{\#VALUE} application
 
 \section{Ecosystem Evolution}
 
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{figures/new_vs_updates_by_month.pdf}
+  \caption{Packages updated and packages created per month. Multiple updates per month are
+  only counted once.}
+  \label{npmGrowth}
+\end{figure}
+
 Created in 2009, \code{npm} has grown
 rapidly in popularity and scope over the last ten years, and 
 as of the original paper showed no signs of slowing down \cite{Wittern:2016}.
@@ -152,8 +159,19 @@ that developer interest is waning, while steady activity would
 indicate that the ecosystem as a whole is healthy and will continue to
 evolve. To search for these potential indicators in the \code{npm} package environment,
 we investigate the number of packages created and updated over time, as well
-as system-wide trends of dependencies within packages. In figure 1 
-[INSERT DATA COMMENTARY HERE]. Figure 2 [MORE DATA COMMENTARY].
+as system-wide trends of dependencies within packages. In Figure \ref{npmGrowth},
+we can observe that while \code{npm} is still growing, the speed at which new packages
+are created has slowed from an exponential to a linear rate. Some other things of note 
+include an observable spike in package creation and updates around March 2016, the month 
+when developer Azer Koçulu removed his 273 packages (including the popular package 
+\code{left-pad}) from \code{npm} and in doing so affected some packages such as 
+\code{babel} and \code{atom}, and therefore a significant fraction of \emph{all} 
+\code{Node.js} projects\footnote{https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm}
+There is also a significant spike in package updates observed in the month of January 2019, caused 
+by some source currently unknown to the authors [TRY TO FIGURE THIS ONE OUT].
+[ADD CONCAVITY DATA]. Figure 2 [CURRENTLY MISSING][MORE DATA COMMENTARY].
+
+
 
 To better visualize the status of inter-package dependencies, we constructed
 a directed dependency graph using dependants as out-degrees and
@@ -200,21 +218,26 @@ paper \cite{Wittern:2016}.
 
 
 \subsection{Relationships between Measures}
+[NEEDS MORE DATA]
 
 \subsection{Distinct Package Types}
+[NEEDS MORE DATA]
 
 \subsection{Popularity Over Time}
+[NEEDS MORE DATA]
 
 \subsubsection{Identifying Top Packages}
+[NEEDS MORE DATA]
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{figures/geo_mean_highest_pagerank.pdf}
   \caption{\code{npm} rank (PageRank) of the five packages with the lowest overall geometric mean}
-  \label{outDegree}
+  \label{topFive}
 \end{figure}
 
 
 \subsubsection{Popular Package Dynamics}
+[NEEDS MORE DATA]
 
 \begin{figure*}
   \includegraphics[width=1\textwidth]{figures/highest_ranked.pdf}
@@ -223,6 +246,7 @@ paper \cite{Wittern:2016}.
 \end{figure*}
 
 \subsubsection{Comparing Popularities}
+[NEEDS MORE DATA]
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{figures/select_packages.png}
@@ -231,14 +255,18 @@ paper \cite{Wittern:2016}.
 \end{figure}
 
 \section{Version Numbering and Package Adoption}
+[NEEDS MORE DATA]
 
 \subsection{Attribution of Version Numbers}
+[NEEDS MORE DATA]
 
 \subsection{Adoption by Version Number}
+[NEEDS MORE DATA]
 
 \section{Related Work}
 
 \section{Conclusion}
+[NEEDS MORE DATA]
 
 
 \begin{thebibliography}{00}
