@@ -1,0 +1,19 @@
+parse-package-json-history.json : takes all jsons at end, and tells useful information
+  Just call, no arguments.
+
+github-sanity-check.py : simply creates two files with the list of repos that cannot be used. (404 / 200 - invalids)
+    Takes a list of group_id, repo_id, and determines which ones are valid, and invalid.
+    
+get-package-json-history.py : gets all the json history, and puts it into a json file
+  supply arguements : group_id, repo_id
+  Ex// python get-package-json-history.py twbs bootstrap
+
+merge-intervals: just prints out the dev_dependencies
+
+dependency_intervals.py : prints out a list of requirement queries
+
+process-versions-by-freq.py : does the dependency thing???
+
+simplify-history-file.py : takes parse-pacage0history.json (trims useless data)
+    supply arguments (open.json, output.json)
+    Ex// twbs-boostrap.json 
