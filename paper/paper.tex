@@ -31,7 +31,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
   In recent years, the tools and packages most commonly involved with JavaScript development have evolved rapidly.
   Newer packages such as Angular and React have experienced a marked increase in popularity among developers, while frameworks such as jQuery
   have begun to phase out.\footnote{\label{adoption}https://insights.stackoverflow.com/survey/2016\#technology-most-popular-technologies, 
-    https://insights.stackoverflow.com/survey/2017\#technology-\_-frameworks-libraries-and-other-technologies, 
+  https://insights.stackoverflow.com/survey/2017\#technology-\_-frameworks-libraries-and-other-technologies, 
   https://insights.stackoverflow.com/survey/2018\#technology-\_-frameworks-libraries-and-tools}
   For this reason we take a second look at a 2016 paper by Wittern, Suter and Rajagopalan \cite{Wittern:2016} 
   to see what aspects of the JavaScript package ecosystem have changed, and if previously observed trends have remained constant.
@@ -171,11 +171,11 @@ version specific information such as authors, maintainers, license used, bugs, a
 version.\\
 
 We obtained the list of all \code{npm} package names from the \code{npm} registry skimdb\footnote{https://skimdb.npmjs.com/registry/\_all\_docs}, and then %TODO fix this footnote, underscores are cursed
-downloaded this metadata for all 797,940 packages on the \code{npm} registry, having found the names of all packages using the npm registry skimdb
+downloaded this metadata for all 797,940 packages on the \code{npm} registry, having found the names of all packages using the \code{npm} registry skimdb
 , which we then converted to a somewhat simplified form as in Listing \ref{sampleSimpleMetadata} with just version and dependency information as this is all
-we care about for this study. There are two kinds of dependencies in the metadata files, a list of runtime dependencies and $devDependencies$ used in testing and development.\\
+we care about for this study. There are two kinds of dependencies in the metadata files, a list of runtime dependencies and \code{devDependencies} used in testing and development.\\
 
-We gathered some information on download counts for \code{npm} packages from the npmjs API\footnote{https://api.npmjs.org/downloads/range/2010-01-01:2019-04-01/packageName} 
+We gathered some information on download counts for \code{npm} packages from the \code{npm} API\footnote{https://api.npmjs.org/downloads/range/2010-01-01:2019-04-01/packageName} 
 however we found that the npmjs API seems to no longer have any data on download counts before October 1 2017, and so were unable to collect
 historic download counts for \code{npm} as a whole or any specific packages.\\
 
@@ -305,7 +305,7 @@ As in the original paper we analyzed popularity of \code{npm} packages using thr
   \item The \textbf{\code{npm} rank} is calculated using the PageRank\cite{brin1998anatomy} of an \code{npm} package within a dependency graph that we built using the
     package metadata as described in Section \ref{Package Metadata}. PageRank is calculated for every package using a damping factor of 0.85 
     and stopping iterations once the cumulative change in values of vertices went below $10^{-6}$. We then order all packages by their PageRank to determine the
-    \code{npm} rank, an relative ranking of packge popularity with 1 being the most popular.
+    \code{npm} rank, an relative ranking of package popularity with 1 being the most popular.
   \item \textbf{download rank}
 \end{enumerate}
 
