@@ -132,7 +132,7 @@ The final data set encompasses 797,940 packages and \textbf{\#VALUE} application
 \end{lstlisting}
 
 \begin{lstlisting}[caption={A mock simplified \code{npm} metadata file.},captionpos=b,
-  label=sampleSimpleMetadata, frame=single, firstline=1][t]
+  label=sampleSimpleMetadata, frame=single, firstline=1]
 {
   "name": "Lorem Ipsum",
   "versions": {
@@ -163,21 +163,31 @@ The final data set encompasses 797,940 packages and \textbf{\#VALUE} application
 }
 \end{lstlisting}
 
-Metadata for every package is available on the \code{npm} registry\footnote{https://registry.npmjs.org/packageName}. 
-This metadata is a JSON file containing some info on licensing, documentation links, maintainers, and crucially for 
-our purposes a log of each version of the package since it's creation, labelled using semantic versioning \cite{preston-werner},
-and a time field containing the timestamp for each version. Each version in the version field contains various bits of 
-version specific information such as authors, maintainers, license used, bugs, and a list of dependencies for that specific
-version.\\
+Metadata for every package is available on the \code{npm}
+registry\footnote{https://registry.npmjs.org/packageName}. 
+This metadata is a \code{JSON} file containing info 
+on licensing, documentation links, and maintainers, as well as
+a log of each version of the package since its creation, which 
+for our purposes is the most crucial element.
+The version data is labelled using semantic 
+versioning \cite{preston-werner} and includes a time field containing 
+the timestamp of creation for each version. Each version in the version 
+field contains various version specific information such as authors, 
+maintainers, the license used, bugs, and a list of dependencies for that specific
+version.
 
-We obtained the list of all \code{npm} package names from the \code{npm} registry skimdb\footnote{https://skimdb.npmjs.com/registry/\_all\_docs}, and then %TODO fix this footnote, underscores are cursed
-downloaded this metadata for all 797,940 packages on the \code{npm} registry, having found the names of all packages using the \code{npm} registry skimdb
-, which we then converted to a somewhat simplified form as in Listing \ref{sampleSimpleMetadata} with just version and dependency information as this is all
-we care about for this study. There are two kinds of dependencies in the metadata files, a list of runtime dependencies and \code{devDependencies} used in testing and development.\\
+We obtained the list of all \code{npm} package names from 
+the \code{npm} registry \code{skimdb}\footnote{https://skimdb.npmjs.com/registry/\_all\_docs}. Using these names,
+we then downloaded the metadata for each of the 797,940 packages hosted by the
+\code{npm} registry and then converted this metadata into a somewhat simplified form 
+with just version and dependency information, as seen
+in Listing \ref{sampleSimpleMetadata}. There are two kinds of dependencies in the metadata
+files: runtime dependencies and \code{devDependencies} used in testing and development.
 
-We gathered some information on download counts for \code{npm} packages from the \code{npm} API\footnote{https://api.npmjs.org/downloads/range/2010-01-01:2019-04-01/packageName} 
-however we found that the npmjs API seems to no longer have any data on download counts before October 1 2017, and so were unable to collect
-historic download counts for \code{npm} as a whole or any specific packages.\\
+% We gathered information on download counts for \code{npm} packages from the
+% \code{npm} API\footnote{https://api.npmjs.org/downloads/range/2010-01-01:2019-04-01/packageName} 
+% however we found that the npm.js API seems to no longer have any data on download counts before October 1 2017, and so were unable to collect
+% historic download counts for \code{npm} as a whole or any specific packages.\\
 
 \subsection{Applications using \code{npm} Packages}
 
@@ -238,8 +248,6 @@ when developer Azer Ko\c{c}ulu removed his 273 packages (including the popular p
 There is also a significant spike in package updates observed in the month of January 2019, caused 
 by some source currently unknown to the authors [TRY TO FIGURE THIS ONE OUT].
 [ADD CONCAVITY DATA]. Figure 2 [CURRENTLY MISSING][MORE DATA COMMENTARY].
-
-
 
 To better visualize the status of inter-package dependencies, we constructed
 a directed dependency graph using dependants as out-degrees and
