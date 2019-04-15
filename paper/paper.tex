@@ -407,6 +407,18 @@ a tool for improving the quality of \code{JavaScript} code\footnote{https://www.
 
 \subsubsection{Popular Package Dynamics}
 
+
+To better understand the evolution of package popularity,
+we investigate the dynamics of the top rankings over time.
+While figure \ref{ranksByYear} demonstrate that package popularity
+appears to be relatively stable, we can examine the number of packages
+entering (and therefore exiting) the top \code{n} packages per year in
+order to obtain a better view of the ecosystem as a whole.
+Table \ref{numEnteringTop} depicts the amount of newcomers to the top
+\code{npm} ranks each year, further supporting the observation that
+core \code{npm} package popularity is becoming more stable as the 
+ecosystem matures.
+
 \begin{table}
   \centering
   % TODO NOTE THAT THIS HAS LOWER NUMBERS THAN THE ORIGINAL PAPER DUE TO MONTHLY PAGERANKS
@@ -428,30 +440,37 @@ a tool for improving the quality of \code{JavaScript} code\footnote{https://www.
   \label{numEnteringTop}
 \end{table}
 
-To better understand the evolution of package popularity,
-we investigate the dynamics of the top rankings over time.
-While figure \ref{ranksByYear} demonstrate that package popularity
-appears to be relatively stable, we can examine the number of packages
-entering (and therefore exiting) the top \code{n} packages per year in
-order to obtain a better view of the ecosystem as a whole.
-Table \ref{numEnteringTop} depicts amount of newcomers to the top
-\code{npm} ranks each year, further supporting the observation that
-core \code{npm} package popularity is becoming more stable as the 
-ecosystem matures.
 
 
-
-
-
-
-\subsubsection{Comparing Popularities}
-[NEEDS MORE DATA]
+\subsubsection{Comparing the Popularity of Similar Packages}
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{figures/select_packages.png}
   \caption{\code{npm} rank (PageRank) over time of selected utility packages}
   \label{selectPackages}
 \end{figure}
+
+One of the significant benefits of being able to determine
+\code{npm} ranks over time is that it allows for the comparison
+of similar packages against each other at an objective level.
+Figure \ref{selectPackages} shows the npm ranks of selected 
+utility packages, as chosen in the original paper \cite{Wittern:2016}.
+One of these packages, \code{underscore}, is among the oldest \code{npm} 
+utility packages, and the rest have been selected for being
+typical alternatives to the \code{underscore} package. Some of these packages,
+such as \code{lodash}, are directly or indirectly results of forks from the
+\code{underscore} repository. While \code{lodash} has kept up and even surpassed
+\code{underscore} in popularity, the majority of newer alternatives are unable
+to consistently compete. Calculating ranks for similar groups of packages such as
+this allow us to isolate notable, successful packages across the entire span of
+the ecosystem's history, as well as evaluate the persistence of the most popular
+core packages over time. In the example group of packages presented in Figure \ref{selectPackages},
+we can observe that the package established early in the ecosystem's life-cycle
+is well-positioned to maintain a significant level of popularity, while the majority of
+other packages tend to eventually decline unless they provide something exceptional,
+such as \code{lodash} providing API compatibility with \code{underscore}\footnote{https://lodash.com/}.
+
+
 
 \section{Version Numbering and Package Adoption}
 [NEEDS MORE DATA]
