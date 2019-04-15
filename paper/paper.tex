@@ -80,7 +80,7 @@ Since the publishing of the original paper, the usage and scale of \code{npm} ha
 and now hosts more than three times as many packages (over 750,000 as of April 1\textsuperscript{st} 2019) 
 and handles over ten times as many weekly package downloads (now over ten billion per week).
 Additionally, the major frameworks used in JavaScript development have undergone a 
-rapid transformation as packages such as Angular and React are adopted\footnotemark[\ref{adoption}].
+rapid transformation as packages such as Angular and React are adopted\footnotemark{\ref{adoption}}.
 The core contributions we make are as follows:
 \begin{itemize}
   \item We replicate and verify the results found in the original paper for the 
@@ -276,6 +276,13 @@ paper \cite{Wittern:2016}.
   \includegraphics[width=0.5\textwidth]{figures/npm_deps_monthly_in_degree.pdf}
   \caption{\code{npm} packages by the number of other packages depending on them}
   \label{inDegree}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=1\linewidth]{figures/packages_vs_dependencies.png}
+  \caption{axis \textbf{y1} shows growth in number of packages in npm (blue line), and the number of dependencies (orange line), 
+  with axis \textbf{y2} showing average number of dependencies per package (green line)}
+  \label{packVSDependencies}
 \end{figure}
 
 \begin{figure}

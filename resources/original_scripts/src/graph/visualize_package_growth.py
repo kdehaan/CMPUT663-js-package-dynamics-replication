@@ -54,7 +54,8 @@ def visualize_growth(input_file, input_clean):
   plt.tight_layout()
   plt.gcf().autofmt_xdate()
   plt.grid()
-  plt.show()
+  plt.savefig("packages_vs_dependencies.png", dpi=300)
+  # plt.show(
 
 
 if __name__=='__main__':
