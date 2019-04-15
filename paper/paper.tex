@@ -103,7 +103,7 @@ To find repositories relying on \code{npm}, we used the Google BigQuery \code{gi
 By using this set we are able to analyze \code{GitHub} data without being constrained to the currently available window provided by the GHTorrent project\cite{Gousi13}.
 The final data set encompasses 797,940 packages and \textbf{\#VALUE} applications.
 
-\subsection{Package Metadata}
+\subsection{Package Metadata} \label{PackageMetadata}
 
 \begin{lstlisting}[caption={A mock \code{npm} package.json. Some fields omitted for brevity.},captionpos=b,
   label=samplePkg, frame=single, firstline=1]
@@ -237,7 +237,8 @@ that developer interest is waning, while steady activity would
 indicate that the ecosystem as a whole is healthy and will continue to
 evolve. To search for these potential indicators in the \code{npm} package environment,
 we investigate the number of packages created and updated over time, as well
-as system-wide trends of dependencies within packages. In Figure \ref{npmGrowth},
+as system-wide trends of dependencies within packages. 
+In Figure \ref{npmGrowth},
 we can observe that while \code{npm} is still growing, the speed at which new packages
 are created has slowed from an exponential to a linear rate. Some other things of note 
 include an observable spike in package creation and updates around March 2016, the month 
@@ -247,19 +248,46 @@ when developer Azer Ko\c{c}ulu removed his 273 packages (including the popular p
 \code{Node.js} projects\footnote{https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm}.
 There is also a significant spike in package updates observed in the month of January 2019, caused 
 by some source currently unknown to the authors [TRY TO FIGURE THIS ONE OUT].
-[ADD CONCAVITY DATA]. Figure 2 [CURRENTLY MISSING][MORE DATA COMMENTARY].
+[ADD CONCAVITY DATA]. 
+
+\begin{figure}
+  \includegraphics[width=1\linewidth]{figures/packages_vs_dependencies.png}
+  \caption{Axis \code{y1} shows growth in number of \code{npm} packages (blue line), and the number of package dependencies (orange line) over time. 
+  Axis \code{y2} shows the average number of dependencies per package (green line).}
+  \label{packVSDependencies}
+\end{figure}
+
+Figure \ref{packVSDependencies} presents the total number of \code{npm} packages over time, 
+as well as the total number of package dependencies. Additionally, we have plotted
+the average number of dependencies per \code{npm} package. Curiously, though total dependencies
+continues to grow faster than the creation of new packages, the number of dependencies 
+for the average package appears to be plateauing. If this trend continues, it could suggest
+that the \code{npm} ecosystem is reaching some sort of equilibrium with regards to the number
+of package dependencies.
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{figures/npm_deps_monthly_out_degree.pdf}
+  \caption{\code{npm} packages by their number of dependencies on other packages.}
+  \label{outDegree}
+\end{figure}
 
 To better visualize the status of inter-package dependencies, we constructed
 a directed dependency graph using dependants as out-degrees and
-dependencies as in-degrees. Based on this graph, Figure \ref{outDegree}
+dependencies as in-degrees. Based on this data, Figure \ref{outDegree}
 displays the percentage of packages with various amounts of dependencies. 
-[MIGHT NEED TO CHANGE BASED ON DATA: While the average number of dependencies 
+This confirms some of our earlier suspicious: while the average number of dependencies 
 of packages continues to increase, the percentage of packages with zero 
 to three dependencies has actually increased since the end of the original paper's
-reporting period \cite{Wittern:2016}. This suggests some changes to developer 
-behaviour, likely either as a deliberate effort by programmers seeking to avoid the perils of 
+reporting period \cite{Wittern:2016}. This supports the hypothesis that developer 
+behaviour is changing, likely either as a deliberate effort by programmers seeking to avoid the perils of 
 complicated dependency trees \cite{Kikas:2017}, or as a natural result of the ever-changing
 ways in which JavaScript is used for project development. [ADD EXACT VALUES]
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{figures/npm_deps_monthly_in_degree.pdf}
+  \caption{\code{npm} packages by the number of other packages depending on them.}
+  \label{inDegree}
+\end{figure}
 
 In addition to the number of external dependencies per package, 
 we investigate how packages support dependants. The original paper 
@@ -272,28 +300,115 @@ dependencies has actually increased. As of April 1\textsuperscript{st} 2019, [NU
 had zero dependants, up from [NUMBER]\% in 2015. Meanwhile, only \%[NUMBER] of packages
 had 6 or more dependants, down from \%[NUMBER] in September 2015. It is again interesting to note
 that the current trend of increasing concentration appears to have begun shortly after the end of window in the original
-paper \cite{Wittern:2016}.
+paper.
+
+In section \ref{popularity}, we revisit the popularity measures
+investigated in the original paper \cite{Wittern:2016} to discover
+changes in the relationships between package rankings
+both inside and outside of the \code{npm} ecosystem,
+gaining insight into the dynamics of \code{npm} package popularity.
+
+\textbf{Takeaways.} We find that while the \code{npm} ecosystem
+continues to grow, the rate of growth is no longer superlinear, 
+a possible sign of the ecosystem beginning to reach some form of maturity \cite{Alves:2011}.
+In the relationships between packages, we find that though the average number
+of dependencies continues to grow, there has been a recent decline in the
+rate of this growth. Accordingly, we have found that the number of packages with
+zero dependencies has increased from 28.7\% in September 2015 to [DATA REQUIRED]\%
+as of April 2019. The percentage of packages that are depended on has
+also declined, albeit still exhibiting a power law relationship as observed
+in prior software ecosystem research \cite{Wittern:2016, Myers:2003, Louridas:2008}.
+
+
+\section{Package Popularity}\label{popularity}
+
+As per the original paper we analyzed popularity of \code{npm} packages using three major measures \cite{Wittern:2016}:
+\begin{enumerate}
+  \item The \textbf{\code{npm} rank} is calculated using the PageRank\cite{brin1998anatomy} of an \code{npm} package within a dependency graph that we built using the
+    package metadata as described in Section \ref{PackageMetadata}. PageRank is calculated for every package using a damping factor of 0.85 
+    and stopping iterations once the cumulative change in values of vertices went below $10^{-6}$. We then order all packages by their PageRank to determine the
+    \code{npm} rank, an relative ranking of package popularity with 1 being the most popular.
+  \item The \textbf{download rank} of a package is based on the the gross volume of package downloads from the \code{npm}
+    registry, then ordered relatively with 1 being the most downloaded.
+  \item \textbf{\code{GitHub} rank} is a measure of the popularity of a package among public \code{GitHub} projects.
+    This rank is created from a list of \code{npm} dependency occurrences found in \code{package.json} files, with rank 1
+    meaning that the package was the most common dependency among analyzed \code{GitHub} repositories.  
+\end{enumerate}
+
+
+\subsection{Relationships between Measures}
+[NEEDS MORE DATA]
+
+\subsection{Distinct Package Types}
+[NEEDS MORE DATA]
+
+\subsection{Popularity Over Time}
+
+With the differences and changes in the relationships between
+popularity measures explored, we can now focus on \code{npm}
+rankings in particular, as it is most representative of the 
+importance of a package to the \code{npm} ecosystem as a whole.
+To obtain \code{npm} ranks over time, we first begin with the
+complete dependency graph as of April 2019. We then examine
+the date references on the edges of the graph to produce \code{PageRanks}
+for each and every package on a monthly basis for the period of October 2010
+to April 2019. From the list of \code{PageRanks} in each month, we then
+produce the relative rank for every package present in the \code{npm}
+ecosystem at that time. 
+
+\subsubsection{Identifying Top Packages}
 
 \begin{figure}
-  \includegraphics[width=0.5\textwidth]{figures/npm_deps_monthly_out_degree.pdf}
-  \caption{\code{npm} packages by their number of dependencies on other packages}
-  \label{outDegree}
+  \includegraphics[width=0.5\textwidth]{figures/geo_mean_highest_pagerank.pdf}
+  \caption{\code{npm} rank (PageRank) of the five packages with the lowest overall geometric mean}
+  \label{topFive}
 \end{figure}
 
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{figures/npm_deps_monthly_in_degree.pdf}
-  \caption{\code{npm} packages by the number of other packages depending on them}
-  \label{inDegree}
-\end{figure}
+One of the most obvious things to investigate is which packages
+have historically performed best throughout the entirety of 
+\code{npm}'s existence. To determine overall package popularity,
+we use the geometric mean \code{npm} rank of a package over the full 
+window of analysis, and order them from lowest to highest (i.e,
+highly ranked to lowly ranked). Geometric mean is used in this instance
+instead of arithmetic mean in order to limit the effect of outliers \cite{Wittern:2016}.
+With popularity calculated in this manner, Figure \ref{topFive} presents 
+the top five \code{npm} packages of all time.
 
-\begin{figure}
-  \includegraphics[width=1\linewidth]{figures/packages_vs_dependencies.png}
-  \caption{axis \textbf{y1} shows growth in number of packages in npm (blue line), and the number of dependencies (orange line), 
-  with axis \textbf{y2} showing average number of dependencies per package (green line)}
-  \label{packVSDependencies}
-\end{figure}
+The first thing to notice about these five packages is that the rankings
+have changed since the time of the original paper. Gone are the packages
+\code{uglify-js} and \code{coffee-script}, and newcomers \code{tape} and \code{mkdirp}
+have appeared. Additionally, though the package \code{should} remains on the list,
+it has fallen from the \#2 to the \#4 position. 
 
-\begin{figure}
+Four of the five current champions are testing utilities---\code{mkdirp} is the sole exception, instead providing the ability to dynamically
+create directories from within \code{node.js}. Curiously, the testing packages
+are essentially all direct competitors of one another, providing a powerful 
+demonstration of both the widespread importance of testing utilities as well as
+the ability for the \code{npm} software ecosystem to support multiple core packages with
+similar yet distinct functionality.
+
+\begin{figure*}
+  \includegraphics[width=1\textwidth]{figures/highest_ranked.pdf}
+  \caption{\code{npm} rank (PageRank) of the five packages each year with the lowest geometric}
+  \label{ranksByYear}
+\end{figure*}
+
+While these packages represent the most consistently popular
+members of \code{npm}, we also evaluate the most popular packages
+on a yearly basis. Figure \ref{ranksByYear} presents the top five packages
+for each individual year from 2011 to 2019. As noted in the original paper,
+the top packages per year are relatively stable from 2013 on \cite{Wittern:2016}.
+One notable exception to this rule is the 2016 rise in popularity of \code{eslint},
+a tool for improving the quality of \code{JavaScript} code\footnote{https://www.npmjs.com/package/eslint}.
+
+
+
+
+
+\subsubsection{Popular Package Dynamics}
+
+\begin{table}
+  \centering
   % TODO NOTE THAT THIS HAS LOWER NUMBERS THAN THE ORIGINAL PAPER DUE TO MONTHLY PAGERANKS
   \begin{tabular}{c|c|c|c}
     Year & Top 10 & Top 100 & Top 250 \\
@@ -311,47 +426,23 @@ paper \cite{Wittern:2016}.
   \end{tabular}
   \caption{Number of packages entering top \code{npm} ranks for the first time}
   \label{numEnteringTop}
-\end{figure}
+\end{table}
 
-\section{Package Popularity}
-
-As in the original paper we analyzed popularity of \code{npm} packages using three major measures
-\begin{enumerate}
-  \item The \textbf{\code{npm} rank} is calculated using the PageRank\cite{brin1998anatomy} of an \code{npm} package within a dependency graph that we built using the
-    package metadata as described in Section \ref{Package Metadata}. PageRank is calculated for every package using a damping factor of 0.85 
-    and stopping iterations once the cumulative change in values of vertices went below $10^{-6}$. We then order all packages by their PageRank to determine the
-    \code{npm} rank, an relative ranking of package popularity with 1 being the most popular.
-  \item \textbf{download rank}
-\end{enumerate}
-
-
-\subsection{Relationships between Measures}
-[NEEDS MORE DATA]
-
-\subsection{Distinct Package Types}
-[NEEDS MORE DATA]
-
-\subsection{Popularity Over Time}
-[NEEDS MORE DATA]
-
-\subsubsection{Identifying Top Packages}
-[NEEDS MORE DATA]
-
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{figures/geo_mean_highest_pagerank.pdf}
-  \caption{\code{npm} rank (PageRank) of the five packages with the lowest overall geometric mean}
-  \label{topFive}
-\end{figure}
+To better understand the evolution of package popularity,
+we investigate the dynamics of the top rankings over time.
+While figure \ref{ranksByYear} demonstrate that package popularity
+appears to be relatively stable, we can examine the number of packages
+entering (and therefore exiting) the top \code{n} packages per year in
+order to obtain a better view of the ecosystem as a whole.
+Table \ref{numEnteringTop} depicts amount of newcomers to the top
+\code{npm} ranks each year, further supporting the observation that
+core \code{npm} package popularity is becoming more stable as the 
+ecosystem matures.
 
 
-\subsubsection{Popular Package Dynamics}
-[NEEDS MORE DATA]
 
-\begin{figure*}
-  \includegraphics[width=1\textwidth]{figures/highest_ranked.pdf}
-  \caption{\code{npm} rank (PageRank) of the five packages each year with the lowest geometric}
-  \label{ranksByYear}
-\end{figure*}
+
+
 
 \subsubsection{Comparing Popularities}
 [NEEDS MORE DATA]
@@ -366,13 +457,27 @@ As in the original paper we analyzed popularity of \code{npm} packages using thr
 [NEEDS MORE DATA]
 
 \subsection{Attribution of Version Numbers}
-[NEEDS MORE DATA]
+[NEEDS MORE DATA
 
 \subsection{Adoption by Version Number}
 [NEEDS MORE DATA]
 
 \section{Related Work}
-[IN PROGRESS]
+
+Related research can be generally described as one of two types
+of work: meta-analyses of the behaviour and importance
+of software ecosystems, and empirical investigations into the
+specifics of a particular ecosystem. Some topics 
+for meta-analyses include ecosystem visualization \cite{LUNGU2010264},
+ecosystem maturity \cite{Alves:2011}, quality metric aggregation \cite{Mordal:2013},
+and literature reviews \cite{Manikas:2013, Manikas:2017}. Specific ecosystem analysis include works such
+paper and the original research by Wittern, Suter and Rajagopalan \cite{Wittern:2016} on \code{npm}.
+Others have performed evaluations of specific ecosystems such as Raemaekers et al. \cite{Raemaekers:2013},
+who present a dataset with basic metrics, dependencies and changes within the popular 
+Java-based Maven ecosystem. Another work investigates the
+result of changing project interdependencies in Apache \cite{Bavota:2013}, 
+and still others evaluate evolution over time in ecosystems such as
+Gentoo \cite{Bloemen:2014}, Ruby, \cite{Kabbedijk:2011}, and R \cite{Plakidas:2017}.
 
 
 \section{Conclusion}
@@ -381,92 +486,140 @@ As in the original paper we analyzed popularity of \code{npm} packages using thr
 
 \begin{thebibliography}{10}
 
+  \bibitem{Alves:2011}
+  Salviano~C.F Alves~A.M., Pessoa~M.
+  \newblock {\em Towards a Systemic Maturity Model for Public Software
+    Ecosystems}, volume 155.
+  \newblock Springer, Berlin, Heidelberg, 2011.
+  
+  \bibitem{Bavota:2013}
+  Gabriele Bavota, Gerardo Canfora, Massimiliano~Di Penta, Rocco Oliveto, and
+    Sebastiano Panichella.
+  \newblock The evolution of project inter-dependencies in a software ecosystem:
+    The case of apache.
+  \newblock In {\em Proceedings of the 2013 IEEE International Conference on
+    Software Maintenance}, ICSM '13, pages 280--289, Washington, DC, USA, 2013.
+    IEEE Computer Society.
+  
   \bibitem{Blincoe:2015}
   Kelly Blincoe, Francis Harrison, and Daniela Damian.
   \newblock Ecosystems in github and a method for ecosystem identification using
-  reference coupling.
+    reference coupling.
   \newblock In {\em Proceedings of the 12th Working Conference on Mining Software
-  Repositories}, MSR '15, pages 202--207, Piscataway, NJ, USA, 2015. IEEE
-  Press.
-
+    Repositories}, MSR '15, pages 202--207, Piscataway, NJ, USA, 2015. IEEE
+    Press.
+  
+  \bibitem{Bloemen:2014}
+  Remco Bloemen, Chintan Amrit, Stefan Kuhlmann, and Gonzalo Ordonez-Matamoros.
+  \newblock Gentoo package dependencies over time.
+  \newblock pages 404--407, 05 2014.
+  
   \bibitem{brin1998anatomy}
   Sergey Brin and Lawrence Page.
   \newblock The anatomy of a large-scale hypertextual web search engine.
   \newblock {\em Computer networks and ISDN systems}, 30(1-7):107--117, 1998.
-
+  
   \bibitem{DBLP:Decan:2018}
   Alexandre Decan, Tom Mens, and Philippe Grosjean.
   \newblock An empirical comparison of dependency network evolution in seven
-  software packaging ecosystems.
+    software packaging ecosystems.
   \newblock {\em CoRR}, abs/1710.04936, 2017.
-
+  
   \bibitem{Gousi13}
   Georgios Gousios.
   \newblock The ghtorrent dataset and tool suite.
   \newblock In {\em Proceedings of the 10th Working Conference on Mining Software
-  Repositories}, MSR '13, pages 233--236, Piscataway, NJ, USA, 2013. IEEE
-  Press.
-
+    Repositories}, MSR '13, pages 233--236, Piscataway, NJ, USA, 2013. IEEE
+    Press.
+  
+  \bibitem{Kabbedijk:2011}
+  Jaap Kabbedijk and Slinger Jansen.
+  \newblock Steering insight: An exploration of the ruby software ecosystem.
+  \newblock volume~80, pages 44--55, 06 2011.
+  
   \bibitem{Kikas:2017}
   Riivo Kikas, Georgios Gousios, Marlon Dumas, and Dietmar Pfahl.
   \newblock Structure and evolution of package dependency networks.
   \newblock In {\em Proceedings of the 14th International Conference on Mining
-  Software Repositories}, MSR '17, pages 102--112, Piscataway, NJ, USA, 2017.
-  IEEE Press.
-
+    Software Repositories}, MSR '17, pages 102--112, Piscataway, NJ, USA, 2017.
+    IEEE Press.
+  
+  \bibitem{Louridas:2008}
+  Panagiotis Louridas, Diomidis Spinellis, and Vasileios Vlachos.
+  \newblock Power laws in software.
+  \newblock {\em ACM Trans. Softw. Eng. Methodol.}, 18(1):2:1--2:26, October
+    2008.
+  
   \bibitem{LUNGU2010264}
   Mircea Lungu, Michele Lanza, Tudor Gîrba, and Romain Robbes.
   \newblock The small project observatory: Visualizing software ecosystems.
   \newblock {\em Science of Computer Programming}, 75(4):264 -- 275, 2010.
   \newblock Experimental Software and Toolkits (EST 3): A special issue of the
-  Workshop on Academic Software Development Tools and Techniques (WASDeTT
-  2008).
-
+    Workshop on Academic Software Development Tools and Techniques (WASDeTT
+    2008).
+  
   \bibitem{Manikas:2013}
   Konstantinos Manikas and Klaus~Marius Hansen.
   \newblock Software ecosystems - a systematic literature review.
   \newblock {\em J. Syst. Softw.}, 86(5):1294--1306, May 2013.
-
+  
   \bibitem{Messerschmitt}
   David Messerschmitt and Clemens Szyperski.
   \newblock {\em Software Ecosystem: Understanding an Indispensable Technology
-  and Industry}.
+    and Industry}.
   \newblock 01 2003.
-
+  
+  \bibitem{Mordal:2013}
+  Karine Mordal-Manet, Nicolas Anquetil, Jannik Laval, Alexander Serebrenik,
+    Bogdan Vasilescu, and Stéphane Ducasse.
+  \newblock Software quality metrics aggregation in industry.
+  \newblock {\em Journal of Software: Evolution and Process}, 25:1117--1135, 10
+    2013.
+  
   \bibitem{Myers:2003}
   Christopher~R. Myers.
   \newblock Software systems as complex networks: Structure, function, and
-  evolvability of software collaboration graphs.
+    evolvability of software collaboration graphs.
   \newblock {\em Phys. Rev. E}, 68:046116, Oct 2003.
-
+  
   \bibitem{DBLP:PanoGA16}
   Amantia Pano, Daniel Graziotin, and Pekka Abrahamsson.
   \newblock What leads developers towards the choice of a javascript framework?
   \newblock {\em CoRR}, abs/1605.04303, 2016.
-
+  
+  \bibitem{Plakidas:2017}
+  Konstantinos Plakidas, Daniel Schall, and Uwe Zdun.
+  \newblock Evolution of the r software ecosystem.
+  \newblock {\em J. Syst. Softw.}, 132(C):119--146, October 2017.
+  
   \bibitem{preston-werner}
   Tom Preston-Werner.
   \newblock Semantic versioning 2.0.0.
-
+  
+  \bibitem{Raemaekers:2013}
+  Steven Raemaekers, Arie van Deursen, and Joost Visser.
+  \newblock The maven repository dataset of metrics, changes, and dependencies.
+  \newblock pages 221--224, 05 2013.
+  
   \bibitem{Manikas:2017}
   M.~{Seppänen}, S.~{Hyrynsalmi}, K.~{Manikas}, and A.~{Suominen}.
   \newblock Yet another ecosystem literature review: 10+1 research communities.
   \newblock In {\em 2017 IEEE European Technology and Engineering Management
-  Summit (E-TEMS)}, pages 1--8, Oct 2017.
-
+    Summit (E-TEMS)}, pages 1--8, Oct 2017.
+  
   \bibitem{Serebrenik:2015}
   Alexander Serebrenik and Tom Mens.
   \newblock Challenges in software ecosystems research.
   \newblock In {\em Proceedings of the 2015 European Conference on Software
-  Architecture Workshops}, ECSAW '15, pages 40:1--40:6, New York, NY, USA,
-  2015. ACM.
-
+    Architecture Workshops}, ECSAW '15, pages 40:1--40:6, New York, NY, USA,
+    2015. ACM.
+  
   \bibitem{Wittern:2016}
   Erik Wittern, Philippe Suter, and Shriram Rajagopalan.
   \newblock A look at the dynamics of the javascript package ecosystem.
   \newblock In {\em Proceedings of the 13th International Conference on Mining
-  Software Repositories}, MSR '16, pages 351--361, New York, NY, USA, 2016.
-  ACM.
+    Software Repositories}, MSR '16, pages 351--361, New York, NY, USA, 2016.
+    ACM.
 
 \end{thebibliography}
 
