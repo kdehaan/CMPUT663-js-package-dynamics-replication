@@ -80,7 +80,7 @@ Since the publishing of the original paper, the usage and scale of \code{npm} ha
 and now hosts more than three times as many packages (over 750,000 as of April 1\textsuperscript{st} 2019) 
 and handles over ten times as many weekly package downloads (now over ten billion per week).
 Additionally, the major frameworks used in JavaScript development have undergone a 
-rapid transformation as packages such as Angular and React are adopted\footnotemark{\ref{adoption}}.
+rapid transformation as packages such as Angular and React are adopted\footnotemark[\ref{adoption}].
 The core contributions we make are as follows:
 \begin{itemize}
   \item We replicate and verify the results found in the original paper for the 
@@ -101,7 +101,7 @@ The window of data analyzed within this paper is October 1\textsuperscript{st} 2
 We collected from three publicly available data sets. Two of these, the \code{npm} registry and the \code{GitHub} repository platform, are from the same source as in the original paper.
 To find repositories relying on \code{npm}, we used the Google BigQuery \code{github\_repos} data set, updated weekly\footnote{https://github.com/fhoffa/analyzing\_github/}.
 By using this set we are able to analyze \code{GitHub} data without being constrained to the currently available window provided by the GHTorrent project\cite{Gousi13}.
-The final data set encompasses 797,940 packages and \textbf{\#VALUE} applications.
+The final data set encompasses 797,940 packages and 40,000 applications.
 
 \subsection{Package Metadata} \label{PackageMetadata}
 
@@ -212,9 +212,9 @@ commit of the project, as well as the list of included \code{npm} packages
 at the time of commit, as listed in every historic version of 
 \code{package.json}, providing us with the \code{npm} packages used by that repository
 at any given time in the project's history. The results showed that on average a repository 
-had 37.9 commits as well as [STATS HERE]. Ultimately, of the 9,017,221 
-public \code{GitHub} projects written in JavaScript and the [NUMBER] of repositories
-using \code{npm} packages, we randomly selected [NUMBER] repositories as
+had 37.9 commits. Ultimately, of the 9,017,221 
+public \code{GitHub} projects written in JavaScript and out of all of the repositories
+using \code{npm} packages, we randomly selected 40,000 repositories as
 a representative data set for the analysis.
 
 
@@ -241,14 +241,14 @@ as system-wide trends of dependencies within packages.
 In Figure \ref{npmGrowth},
 we can observe that while \code{npm} is still growing, the speed at which new packages
 are created has slowed from an exponential to a linear rate. Packages added and updated 
-per month have gone from 10087 and 23100 respectively in September 2015 to 17354 and 48140 respectively in April 2019.
+per month have gone from 10,087 and 23,100 respectively in September 2015 to 17,354 and 48,140 respectively as of April 2019.
 Some other things of note include an observable spike in package creation and updates around March 2016, the month 
 when developer Azer Ko\c{c}ulu removed his 273 packages (including the popular package 
 \code{left-pad}) from \code{npm} and in doing so affected some packages such as 
 \code{babel} and \code{atom}, and therefore a significant fraction of \emph{all} 
 \code{Node.js} projects\footnote{https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm}.
 There is also a significant spike in package updates observed in the month of January 2019, caused 
-by some source currently unknown to the authors [TRY TO FIGURE THIS ONE OUT].
+by some source currently unknown to the authors.
 [ADD CONCAVITY DATA]. 
 
 \begin{figure}
