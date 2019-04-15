@@ -338,11 +338,47 @@ As per the original paper we analyzed popularity of \code{npm} packages using th
 \end{enumerate}
 
 
-\subsection{Relationships between Measures}
-[NEEDS MORE DATA]
+\subsection{Relationships between Measures}\label{metricDiff}
+
+In order to evaluate how different popularity metrics
+relate to each other and for what purposes they can be used,
+we investigate the relationships between our three chosen metrics.
+By calculating the Spearman rank correlation coefficients between
+the metrics, we are able to support the findings of the original 
+paper for the subset of packages for which this correlation is applicable,
+i.e., only those packages which have assigned ranks for each measure used
+in calculating the correlation coefficient. The coefficients presented 
+in Table \ref{corr} are similar to those found in the original paper, 
+supporting the idea that each measure of popularity does not always
+represent the same kind of intrinsic properties of a package, and
+thus cannot necessarily be used interchangeably.
+
+To inspect these relationships in greater detail, Figure \ref{corrGraph}
+plots the differences between ranks of each metric. It may be observed
+that our data presents a relatively normal distribution of differences
+between popularity ranks, again matching the findings of the original paper \cite{Wittern:2016}.
+From these results, we can conclude that our three metrics of popularity
+are measures of different package attributes, and that packages
+with a high rank in one metric can be ranked much lower by another metric.
 
 \subsection{Distinct Package Types}
-[NEEDS MORE DATA]
+
+As we demonstrated in section \ref{metricDiff}, packages that perform well
+by one measure of popularity often perform poorly by others. The original paper
+proposes that one major source of this differential is in the way that packages
+are used \cite{Wittern:2016}. It is surmised that packages ranked highly by the
+\code{npm} PageRank system are primarily packages that are used often within the
+\code{npm} ecosystem, and tend to be \textbf{core utility} packages that are used
+as dependencies for other \code{npm} packages, and rarely used outside of the
+\code{npm} package environment. Conversely, packages that exhibit
+significant popularity by the \code{GitHub} rank tend to be \textbf{end user} packages more
+commonly used in application development as opposed to package construction. 
+In order to confirm this hypothesis, we examine keywords associated with each
+ranking system, as is done in the original paper.
+Tables \ref{npmStrong} and \ref{githubStrong} display keywords most associated with
+each popularity ranking. As the keywords in Table \ref{npmStrong} are closely linked to 
+low level utilities, and the keywords of Table \ref{githubStrong} are strongly related to
+application frameworks, we feel confident confirming the hypothesis of the original authors.
 
 \subsection{Popularity Over Time}
 

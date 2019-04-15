@@ -621,3 +621,173 @@ packages such as \code{lodash} that have managed to compete with the oldest core
 such as \code{underscore}.
 
 ///////
+
+In order to evaluate how different popularity metrics
+relate to each other and for what purposes they can be used,
+we investigate the relationships between our three chosen metrics.
+By calculating the Spearman’s rank correlation coefficients between
+the metrics, we are able to support the findings of the original 
+paper for the subset of packages for which this correlation is applicable,
+i.e., only those packages which have assigned ranks for each measure used
+in calculating the correlation coefficient. The coefficients presented 
+in Table \ref{corr} are similar to those found in the original paper, 
+supporting the idea that each measure of popularity does not always
+represent the same kind of intrinsic properties of a package, and
+thus cannot necessarily be used interchangeably.
+
+To inspect these relationships in greater detail, Figure \ref{corrGraph}
+plots the differences between ranks of each metric. It may be observed
+that our data presents a relatively normal distribution of differences
+between popularity ranks, again matching the findings of the original paper \cite{Wittern:2016}.
+From these results, we can conclude that our three metrics of popularity
+are measures of different package attributes, and that packages
+with a high rank in one metric can be ranked much lower by another metric.
+
+
+
+
+
+
+A first question to answer is whether the considered 
+measures report the popularity of a package in a consistent way.
+To this end, we calculated the Spearman’s rank correlation
+coefficients between them as illustrated in Table 1. 
+The input data used to calculate the correlations only 
+covers a subset of all packages: The npm rank for packages 
+that are not
+depended upon at all cannot be determined because they
+all share the same, minimum PageRank value. Similarly,
+the GitHub rank of packages that are never depended upon
+cannot be determined. Thus, when calculating the correlation 
+coefficients in Table 1, we consider only packages with
+assigned ranks for both of these measures. All packages 
+featured at least one download, so we did not have to dismiss
+any package based on this measure. The low correlation
+values presented in Table 1 show that the three popularity
+measures do not generally depict popularity in the same way
+and can thus not necessarily be substituted for another.
+To assess the relationship between the measures in more
+detail, Figure 5 plots the differences in ranks of packages
+for every combination of popularity measures. Again, for
+every comparison, we consider only packages with assigned
+ranks in both measures. As a consequence, each comparison
+is done over a different number of packages. The y axis
+in each of the top three graphs in Figure 5 ranges from
+minus to plus the number of compared packages. Limiting
+the axes this way allows the three graphs to be compared
+to each other with regards to the shape of the distribution.
+The three histograms at the bottom of Figure 5 illustrate
+the distribution of the differences in popularity measures of
+packages.
+As can be seen, all three comparisons result in a relatively
+normal distribution of differences in popularity ranks. On
+the one hand, this result may seem predictable, given the
+large size of data points we considered. On the other hand,
+all comparisons exhibit extreme cases where packages rank
+considerably higher in one measure as compared to the other
+and vice versa.
+Takeaways. Different package popularity measures produce 
+different outcomes. All comparisons of the three measures 
+considered in this work reveal packages that perform
+strongly in the first measure and poorly in the second as well
+as packages for which the opposite is true. This finding has
+implications on package recommendation tools making use
+of PageRank within npm, e.g., [21]. While their recommendations
+may be useful for package developers, they might
+not be suited for application developers.
+
+////////
+
+As we demonstrated in \ref{metricDiff}, packages that perform well
+by one measure of popularity often perform poorly by others. The original paper
+proposes that one major source of this differential is in the way that packages
+are used \cite{Wittern:2016}. It is surmised that packages ranked highly by the
+\code{npm} PageRank system are primarily packages that are used often within the
+\code{npm} ecosystem, and tend to be \textbf{core utility} packages that are used
+as dependencies for other \code{npm} packages, and rarely used outside of the
+\code{npm} package environment. Conversely, packages that exhibit
+significant popularity by the \code{GitHub} rank tend to be \textbf{end user} packages more
+commonly used in application development as opposed to package construction. 
+In order to confirm this hypothesis, we examine keywords associated with each
+ranking system, as is done in the original paper.
+Tables \ref{npmStrong} and \ref{githubStrong} display keywords most associated with
+each popularity ranking. As the keywords in Table \ref{npmStrong} are closely linked to 
+low level utilities, and the keywords of Table \ref{githubStrong} are strongly related to
+application frameworks, we feel confident confirming the hypothesis of the original authors.
+
+
+
+
+4.2 Differentiating Package Types
+Section 4.1 revealed that there are packages with significantly 
+different ranks regarding the different popularity measures. To 
+gain insight into the nature of these packages,
+we now focus on two measures, npm rank and the GitHub
+rank. We dismiss download ranks because we cannot with
+certainty explain their origin or exclude influences, for example, 
+through web miners or crawlers.
+Focusing on the npm rank and GitHub rank, we propose
+to explain their differences by defining the following types of
+packages:
+• End user packages are used commonly in applications, but not 
+necessarily by other packages. Examples are database drivers 
+like bookshelf (GitHub rank:399, npm rank: 2950), or authentication 
+libraries like passport (GitHub rank: 65, npm rank: 718). We expect 
+end-user packages have high GitHub ranks, but a
+comparatively low npm ranks. Given that many recommendation systems 
+filter down packages based on userinput, these exemplary differences in rank can make
+the difference between a package being displayed in the
+top results or not. For example, among all packages in
+npm with the keyword “authentication” assigned, passport ranks 1st 
+based on the GitHub rank, but only
+ranks 3rd based on the npm rank.
+• Core utility packages are mostly used by other packages but 
+seldom by applications outside of npm. Examples are packages providing low-level functionalities
+like ieee754 (GitHub rank: 37287, npm rank: 2258)
+for reading/writing floating point numbers to buffers
+or is-relative (GitHub rank: 20299, npm rank: 434)
+for detecting relative package dependencies. We expect core utility 
+packages have high npm ranks, but
+low GitHub ranks.
+In order to assess whether we find evidence for this 
+classification of packages, we look further into the nature of
+packages with highly different ranks. Packages in npm can
+be categorized by any number of keywords, which package
+developers may assign, as shown in Listing 1, line 13. We
+assess the keywords assigned to the 1000 packages with the
+highest npm and GitHub rank. We count the appearances of
+every observed keyword and calculate the Pearson correlation 
+coefficient between these counts. The resulting correlation 
+coefficient of 0.823 is relatively strong.
+Thus, to look into more detail, we focus our analysis on
+those packages that reveal the highest difference in npm rank
+as compared to the GitHub rank. Table 2 shows the keywords with 
+the highest difference in count in “npm strong”
+packages as compared to “GitHub strong” packages. “npm
+strong” denotes the set of the 1000 packages that perform
+comparatively the best in npm while performing the worst
+in GitHub. On the other hand, “GitHub strong” denotes the
+set of 1000 packages that perform comparatively the best in
+GitHub while performing the worst in npm. As we can see,
+the keywords most unilaterally used to describe “npm strong”
+packages relate to low-level capabilities such as dealing with
+arrays, buffers, or strings. These keywords are assigned to
+core utility packages, as introduced above.
+In contrast, Table 3 shows the opposite, that is, the keywords 
+with the highest different in count in “GitHub strong”
+packages as compared to “npm strong” packages. As we can
+see, the keywords most unilaterally used to describe “GitHub
+strong” packages are related to capabilities typically used
+in application development. grunt and gulp are plug-insupporting 
+tools to build applications. express is a serverside web 
+application framework, and react is a library used
+to render views. These keywords are assigned to user packages, 
+as introduced above.
+Takeaways. We assumed that there are qualitative differences 
+between packages with either high npm ranks and low
+GitHub ranks or vice versa. Our analysis of the keywords
+used uniquely to describe these packages confirms this suspicion.
+We find indications for both core utility packages
+and end user packages. This finding strengthens our above
+takeaway that package recommendation requires choosing
+an appropriate popularity measure depending on the intended outcome.
