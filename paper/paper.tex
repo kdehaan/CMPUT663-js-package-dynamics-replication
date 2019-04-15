@@ -201,20 +201,19 @@ repositories. Simply being written in JavaScript is not enough to detect
 we looked for projects that contained a \code{package.json} 
 file. After confirming that the formatting of the file matched the \code{npm}
 standard, we are able to confidently say that any remaining packages are 
-using \code{npm} packages. With this criteria, we then compiled a list 
-of [100,000 for now] project 
-repositories from GitHub, a volume that we felt is likely to be an 
-appropriate representation of all such public projects.
+using \code{npm} packages. From this criteria, we compiled a list 
+of applicable project 
+repositories from GitHub.
 Using the \code{GitHub} platform API and the list of valid repository names 
-from before, we cloned the GitHub repository for each project. With
+from before, we cloned the GitHub repository for a random subset of all projects. With
 this, we were then able to determine the date and time of every 
-commit of the project, as well as the list of included \code{npm} packages
-at the time of commit, as listed in every historic version of 
+commit of these projects, as well as the list of included \code{npm} packages
+at the time of every commit, as listed in every historic version of 
 \code{package.json}, providing us with the \code{npm} packages used by that repository
 at any given time in the project's history. The results showed that on average a repository 
-had 37.9 commits. Ultimately, of the 9,017,221 
+had 37.9 commits to its \code{package.json}. Ultimately, of the 9,017,221 
 public \code{GitHub} projects written in JavaScript and out of all of the repositories
-using \code{npm} packages, we randomly selected 40,000 repositories as
+using \code{npm} packages, we selected 40,000 repositories as
 a representative data set for the analysis.
 
 
@@ -249,7 +248,7 @@ when developer Azer Ko\c{c}ulu removed his 273 packages (including the popular p
 \code{Node.js} projects\footnote{https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm}.
 There is also a significant spike in package updates observed in the month of January 2019, caused 
 by some source currently unknown to the authors.
-[ADD CONCAVITY DATA]. 
+% [ADD CONCAVITY DATA]. 
 
 \begin{figure}
   \includegraphics[width=1\linewidth]{figures/packages_vs_dependencies.png}
@@ -315,10 +314,11 @@ continues to grow, the rate of growth is no longer superlinear,
 a possible sign of the ecosystem beginning to reach some form of maturity \cite{Alves:2011}.
 In the relationships between packages, we find that though the average number
 of dependencies continues to grow, there has been a recent decline in the
-rate of this growth. Accordingly, we have found that the number of packages with
-zero dependencies has increased from 28.7\% in September 2015 to [DATA REQUIRED]\%
-as of April 2019. The percentage of packages that are depended on has
-also declined, albeit still exhibiting a power law relationship as observed
+rate of this growth. Accordingly, we have found that the the percentage of packages with zero dependencies has 
+increased from 19.5\% in September 2015 to 23.8\% as of April 2019. The ratio of packages that are depended on has
+also declined, with the percentage of packages with
+one or more dependants decreasing from 27.2\% in September 2015 to 20.8\%
+as of April 2019. However, this still exhibits a power law relationship as observed
 in prior software ecosystem research \cite{Wittern:2016, Myers:2003, Louridas:2008}.
 
 
@@ -399,7 +399,7 @@ While these packages represent the most consistently popular
 members of \code{npm}, we also evaluate the most popular packages
 on a yearly basis. Figure \ref{ranksByYear} presents the top five packages
 for each individual year from 2011 to 2019. As noted in the original paper,
-the top packages per year are relatively stable from 2013 on \cite{Wittern:2016}.
+the top packages per year are relatively stable from 2013 onwards \cite{Wittern:2016}.
 One notable exception to this rule is the 2016 rise in popularity of \code{eslint},
 a tool for improving the quality of \code{JavaScript} code\footnote{https://www.npmjs.com/package/eslint}.
 
@@ -408,7 +408,7 @@ a tool for improving the quality of \code{JavaScript} code\footnote{https://www.
 
 To better understand the evolution of package popularity,
 we investigate the dynamics of the top rankings over time.
-While figure \ref{ranksByYear} demonstrate that package popularity
+While Figure \ref{ranksByYear} demonstrates that package popularity
 appears to be relatively stable, we can examine the number of packages
 entering (and therefore exiting) the top \code{n} packages per year in
 order to obtain a better view of the ecosystem as a whole.
@@ -507,9 +507,9 @@ developers often encounter difficulties when attempting to avoid
 breaking dependencies \cite{Bogart:2015}.
 
 Finally, \code{npm} has been investigated informally. In
-the \code{pagerank} package, web-based \code{PageRanks} are used to evaluate
+the \code{pagerank} package, web-based PageRanks are used to evaluate
 package popularity\footnote{https://www.npmjs.com/package/pagerank}.
-The project code{npm-by-the-numbers} also provides various statistics
+The project \code{npm-by-the-numbers} also provides various statistics
 about the state of \code{npm}, but is significantly out of date and 
 in contrast to this work does not provide an evaluation of the ecosystem over time
 or give any insight into application usage\footnote{https://github.com/ashleygwilliams/npm-by-the-numbers}.
@@ -521,14 +521,14 @@ In this paper, we take a second look at the \code{npm} ecosystem,
 replicating and extending the results of previous research by 
 Wittern, Suter and Rajagopalan \cite{Wittern:2016}. Though
 we observe that the growth of \code{npm} has slowed down, the ecosystem
-continues to thrive, demonstrating signs of maturity rather than decline.
+continues to thrive, demonstrating signs of maturity rather than stagnation.
 
-Contrary to the trend observed in the original paper, there appears to be
+Contrary to the trend observed in the original paper, there now appears to be
 some effort to reduce the number of inter-package dependencies, and therefore the risks
 associated with complex dependency trees. The core set of packages upon which
 multiple other projects rely on has remained relatively constant in size, and
 demonstrates a trend towards even further concentration. Accordingly, the set of packages
-most depended on in the \code{npm} ecosystem is also trending towards stability, with
+most depended on in the \code{npm} ecosystem is also trending towards increasing stability, with
 fewer and fewer packages entering the top ranks each year. 
 
 Our results regarding relationships between popularity metrics support the discoveries of the
