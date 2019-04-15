@@ -17,11 +17,11 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 \title{A Second Look at the Dynamics of the JavaScript Package Ecosystem\\}
 
-\author{\IEEEauthorblockN{Kevin de Haan, Gregory Neagu, Frederic Sauve-Hoover, Abram Hindle}
+\author{\IEEEauthorblockN{Kevin de Haan, Frederic Sauve-Hoover, Gregory Neagu, Abram Hindle}
   \IEEEauthorblockA{\textit{Department of Computing Science} \\
     \textit{University of Alberta}\\
     Edmonton, Canada\\
-  Email: \{kdehaan,neagu,rsauveho,abram.hindle\}@ualberta.ca}
+  Email: \{kdehaan,rsauveho,neagu,abram.hindle\}@ualberta.ca}
 }
 
 \maketitle
@@ -326,9 +326,9 @@ in prior software ecosystem research \cite{Wittern:2016, Myers:2003, Louridas:20
 
 As per the original paper we analyzed popularity of \code{npm} packages using three major measures \cite{Wittern:2016}:
 \begin{enumerate}
-  \item The \textbf{\code{npm} rank} is calculated using the PageRank\cite{brin1998anatomy} of an \code{npm} package within a dependency graph that we built using the
-    package metadata as described in Section \ref{PackageMetadata}. PageRank is calculated for every package using a damping factor of 0.85 
-    and stopping iterations once the cumulative change in values of vertices went below $10^{-6}$. We then order all packages by their PageRank to determine the
+  \item The \textbf{\code{npm} rank} is calculated using the PageRank\cite{brin1998anatomy} of an \code{npm} package within the dependency graph that we built using
+    package metadata as described in Section \ref{PackageMetadata}. PageRank is calculated for every package using a damping factor of 0.85,
+    and stopping iterations once the cumulative change in values of vertices fell below $10^{-6}$. We then order all packages by their PageRank to determine the
     \code{npm} rank, an relative ranking of package popularity with 1 being the most popular.
   \item The \textbf{download rank} of a package is based on the the gross volume of package downloads from the \code{npm}
     registry, then ordered relatively with 1 being the most downloaded.
@@ -501,7 +501,7 @@ core packages over time. In the example group of packages presented in Figure \r
 we can observe that the package established early in the ecosystem's life-cycle
 is well-positioned to maintain a significant level of popularity, while the majority of
 other packages tend to eventually decline unless they provide something exceptional,
-such as \code{lodash} providing API compatibility with \code{underscore}\footnote{https://lodash.com/}.
+such as \code{lodash}\footnote{https://lodash.com/} providing API compatibility with \code{underscore}\footnote{https://underscorejs.org/}.
 
 \textbf{Takeaways.} Using \code{npm} ranks, we are able to identify successful packages 
 at any point in the life-cycle of the ecosystem. We can also use these
