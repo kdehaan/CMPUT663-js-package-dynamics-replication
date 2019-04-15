@@ -369,18 +369,20 @@ supporting the idea that each measure of popularity does not always
 represent the same kind of intrinsic properties of a package, and
 thus cannot necessarily be used interchangeably.
 
-To inspect these relationships in greater detail, Figure \ref{corrGraph}
-plots the differences between ranks of each metric. It may be observed
-that our data presents a relatively normal distribution of differences
-between popularity ranks, again matching the findings of the original paper \cite{Wittern:2016}.
-From these results, we can conclude that our three metrics of popularity
-are measures of different package attributes, and that packages
+% To inspect these relationships in greater detail, Figure \ref{corrGraph}
+% plots the differences between ranks of each metric. It may be observed
+% that our data presents a relatively normal distribution of differences
+% between popularity ranks, again matching the findings of the original paper \cite{Wittern:2016}.
+
+From these results, we can say that our data supports the findings of the original paper, and
+that our three metrics of popularity
+are measures of different package attributes. Functionally, this means that packages
 with a high rank in one metric can be ranked much lower by another metric.
 
 \subsection{Distinct Package Types}
 
 As we demonstrated in section \ref{metricDiff}, packages that perform well
-by one measure of popularity often perform poorly by others. The original paper
+by one measure of popularity can perform poorly by others. The original paper
 proposes that one major source of this differential is in the way that packages
 are used \cite{Wittern:2016}. It is surmised that packages ranked highly by the
 \code{npm} PageRank system are primarily packages that are used often within the
