@@ -103,7 +103,7 @@ To find repositories relying on \code{npm}, we used the Google BigQuery \code{gi
 By using this set we are able to analyze \code{GitHub} data without being constrained to the currently available window provided by the GHTorrent project\cite{Gousi13}.
 The final data set encompasses 797,940 packages and \textbf{\#VALUE} applications.
 
-\subsection{Package Metadata}
+\subsection{Package Metadata} \label{PackageMetadata}
 
 \begin{lstlisting}[caption={A mock \code{npm} package.json. Some fields omitted for brevity.},captionpos=b,
   label=samplePkg, frame=single, firstline=1]
@@ -257,17 +257,23 @@ by some source currently unknown to the authors [TRY TO FIGURE THIS ONE OUT].
   \label{packVSDependencies}
 \end{figure}
 
-Figure 2 [CURRENTLY MISSING][MORE DATA COMMENTARY].
+Figure \ref{packVSDependencies} presents the total number of \code{npm} packages over time, 
+as well as the total number of package dependencies. Additionally, we have plotted
+the average number of dependencies per \code{npm} package. Curiously, though total dependencies
+continues to grow faster than the creation of new packages, the number of dependencies 
+for the average package appears to be plateauing. If this trend continues, it could suggest
+that the \code{npm} ecosystem is reaching some sort of equilibrium with regards to the number
+of package dependencies.
 
 To better visualize the status of inter-package dependencies, we constructed
 a directed dependency graph using dependants as out-degrees and
-dependencies as in-degrees. Based on this graph, Figure \ref{outDegree}
+dependencies as in-degrees. Based on this data, Figure \ref{outDegree}
 displays the percentage of packages with various amounts of dependencies. 
-[MIGHT NEED TO CHANGE BASED ON DATA: While the average number of dependencies 
+This confirms some of our earlier suspicious: while the average number of dependencies 
 of packages continues to increase, the percentage of packages with zero 
 to three dependencies has actually increased since the end of the original paper's
-reporting period \cite{Wittern:2016}. This suggests some changes to developer 
-behaviour, likely either as a deliberate effort by programmers seeking to avoid the perils of 
+reporting period \cite{Wittern:2016}. This supports the hypothesis that developer 
+behaviour is changing, likely either as a deliberate effort by programmers seeking to avoid the perils of 
 complicated dependency trees \cite{Kikas:2017}, or as a natural result of the ever-changing
 ways in which JavaScript is used for project development. [ADD EXACT VALUES]
 
@@ -323,10 +329,14 @@ paper \cite{Wittern:2016}.
 As in the original paper we analyzed popularity of \code{npm} packages using three major measures
 \begin{enumerate}
   \item The \textbf{\code{npm} rank} is calculated using the PageRank\cite{brin1998anatomy} of an \code{npm} package within a dependency graph that we built using the
-    package metadata as described in Section \ref{Package Metadata}. PageRank is calculated for every package using a damping factor of 0.85 
+    package metadata as described in Section \ref{PackageMetadata}. PageRank is calculated for every package using a damping factor of 0.85 
     and stopping iterations once the cumulative change in values of vertices went below $10^{-6}$. We then order all packages by their PageRank to determine the
     \code{npm} rank, an relative ranking of package popularity with 1 being the most popular.
-  \item \textbf{download rank}
+  \item The \textbf{download rank} is based on the the gross volume of package downloads from the \code{npm}
+    registry, then ordered relatively with 1 being the most downloaded.
+  \item \textbf{\code{GitHub} rank} is a measure of the popularity of package use in public \code{GitHub} projects.
+    This rank is created from a list of \code{npm} dependency occurrences found in \code{package.json} files, with rank 1
+    meaning that the package was the most common dependency among analyzed \code{GitHub} repositories.  
 \end{enumerate}
 
 
