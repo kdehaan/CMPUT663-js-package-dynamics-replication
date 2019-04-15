@@ -211,7 +211,8 @@ commit of these projects, as well as the list of included \code{npm} packages
 at the time of every commit, as listed in every historic version of 
 \code{package.json}, providing us with the \code{npm} packages used by that repository
 at any given time in the project's history. The results showed that on average a repository 
-had 37.9 commits to its \code{package.json}. Ultimately, of the 9,017,221 
+had 37.9 commits to its \code{package.json}, and had 8.85 \code{npm} dependencies as well as 
+13.6 \code{devDependencies}. Ultimately, of the 9,017,221 
 public \code{GitHub} projects written in JavaScript and out of all of the repositories
 using \code{npm} packages, we selected 40,000 repositories as
 a representative data set for the analysis.
@@ -346,9 +347,9 @@ As per the original paper we analyzed popularity of \code{npm} packages using th
   \begin{tabular}{c|c c c}
      & \code{npm} PageRank & Downloads & \code{GitHub} \\
     \hline
-    \code{npm} PageRank & - & 0.389 & 0.405\\
-    Downloads & 0.389 & - & 0.576\\
-    \code{GitHub} & 0.405 & 0.576 & -\\
+    \code{npm} PageRank & - & 0.550 & 0.345\\
+    Downloads & 0.550 & - & 0.444\\
+    \code{GitHub} & 0.345 & 0.444 & -\\
 
   \end{tabular}
   \caption{Spearman rank correlation coefficients between selected measures of popularity.}
