@@ -596,3 +596,28 @@ embraced by developers, despite the prescribed usage of semantic versioning, and
 shows that flexible version queries can lead to significant
 immediate adoption ratios.
 
+///////
+
+
+Takeaways. Calculating npm ranks (i.e., PageRanks) over
+time allows to identify well-performing packages across the
+life-cycle of a software ecosystem. They can also be used
+to determine how dynamic or static the ranks of the most
+popular packages are. For npm, we find that, while decreasing, there is still considerable amount of change in the top
+ranks. Nonetheless, comparing functionally similar packages indicates that high popularity for some packages may
+be long lasting. In our example, we find that most utility
+libraries are declining as compared to the dominant underscore, except competitor lodash which positioned itself well
+by providing API compatibility.
+
+
+Using \code{npm} ranks, we are able to identify successful packages 
+at any point in the life-cycle of the ecosystem. We can also use these
+ranks to obtain a measure of package popularity stability over time. In 
+the \code{npm} ecosystem, the amount of change in the highest ranked packages
+has decreased significantly since the inception of the service, with many
+more recent utilities falling out of favour relative to the oldest and most
+historically successful equivalents. However, there are still some relatively newer 
+packages such as \code{lodash} that have managed to compete with the oldest core packages
+such as \code{underscore}.
+
+///////
