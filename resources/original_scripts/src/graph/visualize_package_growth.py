@@ -14,21 +14,24 @@ import sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 from matplotlib import rc
 rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
 rc('text', usetex=True)
 
 def visualize_growth(input_file, input_clean):
-  df = pd.read_csv(input_file, index_col=0, parse_dates=0).T
+  df = pd.read_csv(input_file, index_col=0, parse_dates=False).T
 
   df.rename(columns={'num_vertices': 'Packages', 'num_edges': 'Dependencies'}, inplace=True)
 
-  df_clean = pd.read_csv(input_clean, index_col=0, parse_dates=0)
+  df_clean = pd.read_csv(input_clean, index_col=0, parse_dates=False)
   df_clean.columns = ['Packages newer than 180 days']
 
   df = df[['Packages', 'Dependencies']].join(df_clean)
 
   df['Dependencies per Package'] = pd.DataFrame(df['Dependencies'] / df['Packages'])
+
+  # print(df['Dependencies per Package'])
 
   width = 5.0
   plt.rc("figure", figsize=(width, 3.0*width/4.0))
@@ -36,15 +39,20 @@ def visualize_growth(input_file, input_clean):
   # plot left:
   ax = df[['Packages', 'Dependencies']].plot(lw=2.0, legend=False)
   ax.set_ylabel('No. of Packages / Dependencies')
+  ax.set_ylim(0, 7500000)
+  # ax.xaxis.set_major_locator(mdates.MonthLocator())
+  # ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
   ax.xaxis.grid(True)
-
 
   # plot rights:
   ax2 = df['Dependencies per Package'].plot(secondary_y=True, lw=2.0, legend=False)
   ax2.set_ylim(0,10)
   ax2.set_ylabel('Dependencies per Package')
+  # ax2.xaxis.set_major_locator(mdates.MonthLocator(interval=1))
+  # ax2.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
 
   plt.tight_layout()
+  plt.gcf().autofmt_xdate()
   plt.grid()
   plt.show()
 
