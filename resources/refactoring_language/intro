@@ -446,6 +446,27 @@ of them, even in 2015.
 
 /////
 
+One of the significant benefits of being able to determine
+\code{npm} ranks over time is that it allows for the comparison
+of similar packages against each other at an objective level.
+Figure \ref{selectPackages} shows the npm ranks of selected 
+utility packages, as chosen in the original paper \cite{Wittern:2016}.
+One of these packages, \code{underscore}, is among the oldest \code{npm} 
+utility packages, and the rest have been selected for being
+typical alternatives to the \code{underscore} package. Some of these packages,
+such as \code{lodash}, are directly or indirectly results of forks from the
+\code{underscore} repository. While \code{lodash} has kept up and even surpassed
+\code{underscore} in popularity, the majority of newer alternatives are unable
+to consistently compete. Calculating ranks for similar groups of packages such as
+this allow us to isolate notable, successful packages across the entire span of
+the ecosystem's history, as well as evaluate the persistence of the most popular
+core packages over time. In the example group of packages presented in Figure \ref{selectPackages},
+we can observe that the package established early in the ecosystem's life-cycle
+is well-positioned to maintain a significant level of popularity, while the majority of
+other packages tend to eventually decline unless they provide something exceptional,
+such as \code{lodash} providing API compatibility with \code{underscore}\footnote{https://lodash.com/}.
+
+
 4.3.3 Comparing Popularity of Similar Packages
 Another capability arising from being able to determine
 npm ranks over time is to compare selected packages against
@@ -458,13 +479,7 @@ has been introduced early in npm’s history5. Since its release,
 underscore held a top npm rank. Nonetheless, multiple competitors
 have entered npm since then, some of which
 directly position themselves as alternatives to underscore.
-For example, lodash evolved from a fork from the under5It first
-ranks at January 14th 2010 in our data. However, its earliest
-commit on GitHub stems from October 25th 2009 and a first package.json
-was added in version 0.2.0, which was released on October
-28th 2009, c.f. https://github.com/jashkenas/underscore/commits/
-master
-score project and kept API compatibility6, and lazy.js
+For example, lodash evolved from a fork from the under score project and kept API compatibility6, and lazy.js
 proclaims to be “[...] similar to underscore and lodash,
 [...]”7. The selection of presented utility packages is based
 on a web search for underscore competitors. While various underscore competitors have entered npm throughout
