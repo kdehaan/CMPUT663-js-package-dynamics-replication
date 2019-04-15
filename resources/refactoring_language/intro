@@ -322,3 +322,161 @@ dependencies between packages [25]. In contrast to our work, npm
 by numbers considers only a single point in time, whereas
 we focus on the evolution of the ecosystem, and provides no
 insight derived from client applications.
+
+
+
+
+
+
+With the differences and changes in the relationships between
+popularity measures explored, we can now examine \code{npm}
+rankings in particular, as it is most representative of the 
+importance of a package to the \code{npm} ecosystem as a whole.
+To obtain \code{npm} ranks over time, we first begin with the
+complete dependency graph as of April 2019. We then examine
+the date references on the edges of the graph to produce \code{PageRanks}
+for each and every package on a monthly basis for the period of October 2010
+to April 2019. From the list of \code{PageRanks} in each month, we then
+produce the relative rank for every package present in the \code{npm}
+ecosystem at that time. 
+
+
+Having established differences in the meaning of different
+popularity measures, we now focus on one measure and assess
+how package popularity evolves with regard to it over
+time. The npm rank denotes how central a package is to
+the npm ecosystem. To obtain npm ranks over time, we start
+with the complete dependency graph as of September 1st
+2015. Using the date annotations between all edges in the
+graph, we then create a filtered version of that graph for
+every week between September 1st 2010 and September 1st
+2015. For every one of the resulting 257 graphs, we calculate
+the PagerRank value of every package present at that point
+in time and assign the npm rank thereupon.
+
+
+///////
+
+One of the most obvious things to investigate is which packages
+have historically performed best throughout the entirety of 
+\code{npm's} existence. To determine overall package popularity,
+we use the geometric mean \code{npm} rank of a package over the full 
+window of analysis, and order them from lowest to highest (i.e,
+highly ranked to lowly ranked). Geometric mean is used in this instance
+instead of arithmetic mean in order to limit the effect of outliers \cite{Wittern:2016}.
+With popularity calculated in this manner, Figure \ref{topFive} presents 
+the top five \code{npm} packages of all time.
+
+The first thing to notice about these five packages is that the rankings
+have changed since the time of the original paper. Gone are the packages
+\code{uglify-js} and \code{coffee-script}, and newcomers \code{tape} and \{mkdirp}
+have appeared. Additionally, though the package \code{should} remains on the list,
+it has fallen from the #2 to the #4 position. 
+
+Four of the five current champions are testing utilities, with
+\code{mkdirp} as the odd one out, instead providing the ability to dynamically
+create directories from \code{node.js}. Curiously, the testing packages
+are essentially all direct competitors of one another, providing a powerful 
+demonstration of the widespread importance of testing utilities as well as
+the ability for the \code{npm} software ecosystem to support multiple core packages with
+similar, yet distinct functionally.
+
+While these packages represent the most consistently popular
+members of \code{npm}, we also evaluate the most popular packages
+on a yearly basis. Figure \ref{ranksByYear} presents the top five packages
+for each individual year from 2011 to 2019. As noted in the original paper,
+the top packages per year are relatively stable from 2013 on \cite{Wittern:2016}.
+One notable exception to this rule is the 2016 rise in popularity of \code{eslint},
+a tool for improving the quality of \code{JavaScript} code\footnote{https://www.npmjs.com/package/eslint}.
+
+
+
+
+
+4.3.1 Identifying Top Packages
+An immediate question to answer is which packages perform the 
+best over the whole existence of npm. One way to
+answer this question is, as illustrated in Figure 6, to 
+determine the packages with the lowest mean npm rank (i.e., the
+highest ranked packages). We use the geometric mean for
+this purpose as it is less prone to outliers as compared to
+the arithmetic mean. We limit the y axis in Figure 6 from
+1 to 100 for readability.
+
+The top packages illustrated in Figure 6 are diverse in
+nature. should and nodeunit are tools for testing, uglifyjs
+is used to minimize and obfuscate (client) code, coffeescript 
+is a language compiling down to JavaScript, and
+underscore provides a set of generic utility functions.
+While the packages presented in Figure 6 stand for long
+running success, a more fine grained analysis is needed to
+gain insights into momentary package success. Figure 7
+breaks down the 5 packages with the lowest mean npm rank
+per year from 2011 to 2015. We see that, for example,
+coffee-script ranks in the top 5 only in 2011 and 2012.
+Other packages, like the file system utility glob or the
+ evolution of testing tool tape (built on top of tap) only make
+it into the top 5 in later years, i.e., 2014 and 2015. 
+Interestingly though, the npm rank of packages in the top 5 remains
+relatively stable, especially from 2013 on.
+
+/////
+
+To better understand the evolution of package popularity,
+we investigate the dynamics of the top rankings over time.
+While figure \ref{ranksByYear} demonstrate that package popularity
+appears to be relatively stable, we can examine the number of packages
+entering (and therefore exiting) the top \code{n} packages per year in
+order to obtain a better view of the ecosystem as a whole.
+Table \ref{numEnteringTop} depicts amount of newcomers to the top
+\code{npm} ranks each year, further supporting the observation that
+core \code{npm} package popularity is becoming more stable as the 
+ecosystem matures.
+
+
+4.3.2 Top Package Dynamics
+As there seems to be little dynamics in the yearly top 5
+packages as shown in Figure 7, we aim to determine how
+many packages manage to enter top npm ranks over time.
+Table 4 depicts the overall number of packages entering top
+10, top 100, and top 250 npm ranks per year. While Table 4
+indicates declining numbers of new packages entering top
+ranks, it also shows that there is still a considerable amount
+of them, even in 2015.
+
+/////
+
+4.3.3 Comparing Popularity of Similar Packages
+Another capability arising from being able to determine
+npm ranks over time is to compare selected packages against
+each other. Figure 8 shows the npm ranks of selected utility
+packages over time. These utility packages typically provide
+a broad set of capabilities like improving convenience
+in dealing with data types like objects, arrays, or strings.
+As Figure 8 shows, one package in particular, underscore,
+has been introduced early in npm’s history5. Since its release,
+underscore held a top npm rank. Nonetheless, multiple competitors
+have entered npm since then, some of which
+directly position themselves as alternatives to underscore.
+For example, lodash evolved from a fork from the under5It first
+ranks at January 14th 2010 in our data. However, its earliest
+commit on GitHub stems from October 25th 2009 and a first package.json
+was added in version 0.2.0, which was released on October
+28th 2009, c.f. https://github.com/jashkenas/underscore/commits/
+master
+score project and kept API compatibility6, and lazy.js
+proclaims to be “[...] similar to underscore and lodash,
+[...]”7. The selection of presented utility packages is based
+on a web search for underscore competitors. While various underscore competitors have entered npm throughout
+its history, most of their npm ranks are on a declining trajectory since 2014, even if they exhibited growth before. The
+one exception is lodash, which has gradually risen in npm
+rank since its introduction and was able to surpass underscore for good in May 2015 according to our data.
+Takeaways. Calculating npm ranks (i.e., PageRanks) over
+time allows to identify well-performing packages across the
+life-cycle of a software ecosystem. They can also be used
+to determine how dynamic or static the ranks of the most
+popular packages are. For npm, we find that, while decreasing, there is still considerable amount of change in the top
+ranks. Nonetheless, comparing functionally similar packages indicates that high popularity for some packages may
+be long lasting. In our example, we find that most utility
+libraries are declining as compared to the dominant underscore, except competitor lodash which positioned itself well
+by providing API compatibility.

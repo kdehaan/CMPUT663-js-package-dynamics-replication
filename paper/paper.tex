@@ -344,6 +344,68 @@ As per the original paper we analyzed popularity of \code{npm} packages using th
 
 \subsection{Popularity Over Time}
 
+With the differences and changes in the relationships between
+popularity measures explored, we can now focus on \code{npm}
+rankings in particular, as it is most representative of the 
+importance of a package to the \code{npm} ecosystem as a whole.
+To obtain \code{npm} ranks over time, we first begin with the
+complete dependency graph as of April 2019. We then examine
+the date references on the edges of the graph to produce \code{PageRanks}
+for each and every package on a monthly basis for the period of October 2010
+to April 2019. From the list of \code{PageRanks} in each month, we then
+produce the relative rank for every package present in the \code{npm}
+ecosystem at that time. 
+
+\subsubsection{Identifying Top Packages}
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{figures/geo_mean_highest_pagerank.pdf}
+  \caption{\code{npm} rank (PageRank) of the five packages with the lowest overall geometric mean}
+  \label{topFive}
+\end{figure}
+
+One of the most obvious things to investigate is which packages
+have historically performed best throughout the entirety of 
+\code{npm}'s existence. To determine overall package popularity,
+we use the geometric mean \code{npm} rank of a package over the full 
+window of analysis, and order them from lowest to highest (i.e,
+highly ranked to lowly ranked). Geometric mean is used in this instance
+instead of arithmetic mean in order to limit the effect of outliers \cite{Wittern:2016}.
+With popularity calculated in this manner, Figure \ref{topFive} presents 
+the top five \code{npm} packages of all time.
+
+The first thing to notice about these five packages is that the rankings
+have changed since the time of the original paper. Gone are the packages
+\code{uglify-js} and \code{coffee-script}, and newcomers \code{tape} and \code{mkdirp}
+have appeared. Additionally, though the package \code{should} remains on the list,
+it has fallen from the \#2 to the \#4 position. 
+
+Four of the five current champions are testing utilities---\code{mkdirp} is the sole exception, instead providing the ability to dynamically
+create directories from within \code{node.js}. Curiously, the testing packages
+are essentially all direct competitors of one another, providing a powerful 
+demonstration of both the widespread importance of testing utilities as well as
+the ability for the \code{npm} software ecosystem to support multiple core packages with
+similar yet distinct functionality.
+
+\begin{figure*}
+  \includegraphics[width=1\textwidth]{figures/highest_ranked.pdf}
+  \caption{\code{npm} rank (PageRank) of the five packages each year with the lowest geometric}
+  \label{ranksByYear}
+\end{figure*}
+
+While these packages represent the most consistently popular
+members of \code{npm}, we also evaluate the most popular packages
+on a yearly basis. Figure \ref{ranksByYear} presents the top five packages
+for each individual year from 2011 to 2019. As noted in the original paper,
+the top packages per year are relatively stable from 2013 on \cite{Wittern:2016}.
+One notable exception to this rule is the 2016 rise in popularity of \code{eslint},
+a tool for improving the quality of \code{JavaScript} code\footnote{https://www.npmjs.com/package/eslint}.
+
+
+
+
+
+\subsubsection{Popular Package Dynamics}
 
 \begin{table}
   \centering
@@ -366,27 +428,21 @@ As per the original paper we analyzed popularity of \code{npm} packages using th
   \label{numEnteringTop}
 \end{table}
 
+To better understand the evolution of package popularity,
+we investigate the dynamics of the top rankings over time.
+While figure \ref{ranksByYear} demonstrate that package popularity
+appears to be relatively stable, we can examine the number of packages
+entering (and therefore exiting) the top \code{n} packages per year in
+order to obtain a better view of the ecosystem as a whole.
+Table \ref{numEnteringTop} depicts amount of newcomers to the top
+\code{npm} ranks each year, further supporting the observation that
+core \code{npm} package popularity is becoming more stable as the 
+ecosystem matures.
 
-[NEEDS MORE DATA]
-
-\subsubsection{Identifying Top Packages}
-[NEEDS MORE DATA]
-
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{figures/geo_mean_highest_pagerank.pdf}
-  \caption{\code{npm} rank (PageRank) of the five packages with the lowest overall geometric mean}
-  \label{topFive}
-\end{figure}
 
 
-\subsubsection{Popular Package Dynamics}
-[NEEDS MORE DATA]
 
-\begin{figure*}
-  \includegraphics[width=1\textwidth]{figures/highest_ranked.pdf}
-  \caption{\code{npm} rank (PageRank) of the five packages each year with the lowest geometric}
-  \label{ranksByYear}
-\end{figure*}
+
 
 \subsubsection{Comparing Popularities}
 [NEEDS MORE DATA]
