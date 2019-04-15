@@ -240,8 +240,9 @@ we investigate the number of packages created and updated over time, as well
 as system-wide trends of dependencies within packages. 
 In Figure \ref{npmGrowth},
 we can observe that while \code{npm} is still growing, the speed at which new packages
-are created has slowed from an exponential to a linear rate. Some other things of note 
-include an observable spike in package creation and updates around March 2016, the month 
+are created has slowed from an exponential to a linear rate. Packages added and updated 
+per month have gone from 10087 and 23100 respectively in September 2015 to 17354 and 48140 respectively in April 2019.
+Some other things of note include an observable spike in package creation and updates around March 2016, the month 
 when developer Azer Ko\c{c}ulu removed his 273 packages (including the popular package 
 \code{left-pad}) from \code{npm} and in doing so affected some packages such as 
 \code{babel} and \code{atom}, and therefore a significant fraction of \emph{all} 
@@ -281,7 +282,8 @@ to three dependencies has actually increased since the end of the original paper
 reporting period \cite{Wittern:2016}. This supports the hypothesis that developer 
 behaviour is changing, likely either as a deliberate effort by programmers seeking to avoid the perils of 
 complicated dependency trees \cite{Kikas:2017}, or as a natural result of the ever-changing
-ways in which JavaScript is used for project development. [ADD EXACT VALUES]
+ways in which JavaScript is used for project development. In particular, the number of packages with zero dependencies
+has increased from 19.5\% in September 2015 to 23.8\% as of April 2019.
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{figures/npm_deps_monthly_in_degree.pdf}
@@ -296,8 +298,8 @@ minority of packages, with the majority of packages having no dependants,
 a discovery that has also been observed in other software ecosystems such
 as Linux and MySQL \cite{Myers:2003}. In our updated data, we discover 
 that not only have these aspects held true, but the concentration of 
-dependencies has actually increased. As of April 1\textsuperscript{st} 2019, [NUMBER]\% of packages
-had zero dependants, up from [NUMBER]\% in 2015. Meanwhile, only \%[NUMBER] of packages
+dependencies has actually increased. As of April 1\textsuperscript{st} 2019, 79.2\% of packages
+had zero dependants, up from 72.8\% in September 2015. Meanwhile, only \%[NUMBER] of packages
 had 6 or more dependants, down from \%[NUMBER] in September 2015. It is again interesting to note
 that the current trend of increasing concentration appears to have begun shortly after the end of window in the original
 paper.
