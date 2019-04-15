@@ -495,3 +495,43 @@ ranks. Nonetheless, comparing functionally similar packages indicates that high 
 be long lasting. In our example, we find that most utility
 libraries are declining as compared to the dominant underscore, except competitor lodash which positioned itself well
 by providing API compatibility.
+
+//////
+
+
+In this paper, we take a second look at the \code{npm} ecosystem,
+replicating and extending the results of previous research by 
+Wittern, Suter and Rajagopalan \cite{Wittern:2016}. Though
+we observe that while the growth of \code{npm} has slowed down, the ecosystem
+continues to thrive, demonstrating signs of maturity rather than decline.
+
+Contrary to the trend observed in the original paper, there appears to be
+some effort to reduce the number of inter-package dependencies, and therefore the risks
+associated with complex dependency trees. The core set of packages upon which
+multiple other projects rely on has remained relatively constant in size, and
+demonstrates a trend towards even further concentration. Accordingly, the set of packages
+most depended on in the \code{npm} ecosystem is also trending towards stability, with
+fewer and fewer packages entering the top ranks each year. 
+
+Our results regarding relationships between popularity metrics support the discoveries of the
+original paper, further reinforcing the theory that packages can be generally divided into the categories
+of end user and core utility packages, and improving our understanding of how package popularity evolves.
+Ultimately, our second evaluation of the \code{JavaScript} package environment can help developers evaluate
+the state of the \code{npm} ecosystem, and continue to make informed decisions when selecting frameworks
+to use in their applications.
+
+
+
+In this paper, we conducted an analysis of the npm ecosystem, one of the largest software ecosystems encompassing
+application frameworks, libraries, and utilities used in both
+server-side Node.js and browser-side JavaScript applications.
+We find npm to be a striving ecosystem with ongoing and
+even accelerating growth of packages and increasing dependencies between them.
+ Our findings regarding the differences in popularity measures can be used to improve the
+search and recommendation systems targeting npm, as well
+as help developers to make informed decisions when choosing packages 
+for use in their applications. Finally, our assessment of version numbers indicates different conventions
+embraced by developers, despite the prescribed usage of semantic versioning, and our assessment of version adoption
+shows that flexible version queries can lead to significant
+immediate adoption ratios.
+

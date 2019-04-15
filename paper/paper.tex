@@ -90,8 +90,8 @@ The core contributions we make are as follows:
     noted in the original paper are still observable.
   \item We investigate whether the continued evolution of the JavaScript package 
     ecosystem has affected the relationships between various measures of package popularity.
-  \item We determine if the ongoing maturation of the \code{npm} ecosystem has 
-    resulted in tangible changes to version numbering or adoption practices.
+  % \item We determine if the ongoing maturation of the \code{npm} ecosystem has 
+  %   resulted in tangible changes to version numbering or adoption practices.
 \end{itemize}
 
 
@@ -402,11 +402,7 @@ One notable exception to this rule is the 2016 rise in popularity of \code{eslin
 a tool for improving the quality of \code{JavaScript} code\footnote{https://www.npmjs.com/package/eslint}.
 
 
-
-
-
 \subsubsection{Popular Package Dynamics}
-
 
 To better understand the evolution of package popularity,
 we investigate the dynamics of the top rankings over time.
@@ -441,7 +437,6 @@ ecosystem matures.
 \end{table}
 
 
-
 \subsubsection{Comparing the Popularity of Similar Packages}
 
 \begin{figure}
@@ -470,16 +465,14 @@ is well-positioned to maintain a significant level of popularity, while the majo
 other packages tend to eventually decline unless they provide something exceptional,
 such as \code{lodash} providing API compatibility with \code{underscore}\footnote{https://lodash.com/}.
 
+% \section{Version Numbering and Package Adoption}
+% [NEEDS MORE DATA]
 
+% \subsection{Attribution of Version Numbers}
+% [NEEDS MORE DATA
 
-\section{Version Numbering and Package Adoption}
-[NEEDS MORE DATA]
-
-\subsection{Attribution of Version Numbers}
-[NEEDS MORE DATA
-
-\subsection{Adoption by Version Number}
-[NEEDS MORE DATA]
+% \subsection{Adoption by Version Number}
+% [NEEDS MORE DATA]
 
 \section{Related Work}
 
@@ -489,18 +482,38 @@ of software ecosystems, and empirical investigations into the
 specifics of a particular ecosystem. Some topics 
 for meta-analyses include ecosystem visualization \cite{LUNGU2010264},
 ecosystem maturity \cite{Alves:2011}, quality metric aggregation \cite{Mordal:2013},
-and literature reviews \cite{Manikas:2013, Manikas:2017}. Specific ecosystem analysis include works such
-paper and the original research by Wittern, Suter and Rajagopalan \cite{Wittern:2016} on \code{npm}.
+and literature reviews \cite{Manikas:2013, Manikas:2017}. Specific ecosystem analysis include works such as this
+paper as well as the original research by Wittern, Suter and Rajagopalan \cite{Wittern:2016} on \code{npm}.
 Others have performed evaluations of specific ecosystems such as Raemaekers et al. \cite{Raemaekers:2013},
 who present a dataset with basic metrics, dependencies and changes within the popular 
 Java-based Maven ecosystem. Another work investigates the
 result of changing project interdependencies in Apache \cite{Bavota:2013}, 
-and still others evaluate evolution over time in ecosystems such as
+and still others evaluate evolution over time in ecosystems like
 Gentoo \cite{Bloemen:2014}, Ruby, \cite{Kabbedijk:2011}, and R \cite{Plakidas:2017}.
 
 
 \section{Conclusion}
-[NEEDS MORE DATA]
+
+In this paper, we take a second look at the \code{npm} ecosystem,
+replicating and extending the results of previous research by 
+Wittern, Suter and Rajagopalan \cite{Wittern:2016}. Though
+we observe that the growth of \code{npm} has slowed down, the ecosystem
+continues to thrive, demonstrating signs of maturity rather than decline.
+
+Contrary to the trend observed in the original paper, there appears to be
+some effort to reduce the number of inter-package dependencies, and therefore the risks
+associated with complex dependency trees. The core set of packages upon which
+multiple other projects rely on has remained relatively constant in size, and
+demonstrates a trend towards even further concentration. Accordingly, the set of packages
+most depended on in the \code{npm} ecosystem is also trending towards stability, with
+fewer and fewer packages entering the top ranks each year. 
+
+Our results regarding relationships between popularity metrics support the discoveries of the
+original paper, further reinforcing the theory that packages can be generally divided into the categories
+of end user and core utility packages, and improving our understanding of how package popularity evolves.
+Ultimately, our second evaluation of the \code{JavaScript} package environment can help developers evaluate
+the state of the \code{npm} ecosystem, and continue to make informed decisions when selecting frameworks
+to use in their applications.
 
 
 \begin{thebibliography}{10}
