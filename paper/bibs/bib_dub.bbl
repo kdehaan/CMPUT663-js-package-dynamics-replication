@@ -1,5 +1,20 @@
 \begin{thebibliography}{10}
 
+\bibitem{Alves:2011}
+Salviano~C.F Alves~A.M., Pessoa~M.
+\newblock {\em Towards a Systemic Maturity Model for Public Software
+  Ecosystems}, volume 155.
+\newblock Springer, Berlin, Heidelberg, 2011.
+
+\bibitem{Bavota:2013}
+Gabriele Bavota, Gerardo Canfora, Massimiliano~Di Penta, Rocco Oliveto, and
+  Sebastiano Panichella.
+\newblock The evolution of project inter-dependencies in a software ecosystem:
+  The case of apache.
+\newblock In {\em Proceedings of the 2013 IEEE International Conference on
+  Software Maintenance}, ICSM '13, pages 280--289, Washington, DC, USA, 2013.
+  IEEE Computer Society.
+
 \bibitem{Blincoe:2015}
 Kelly Blincoe, Francis Harrison, and Daniela Damian.
 \newblock Ecosystems in github and a method for ecosystem identification using
@@ -7,6 +22,11 @@ Kelly Blincoe, Francis Harrison, and Daniela Damian.
 \newblock In {\em Proceedings of the 12th Working Conference on Mining Software
   Repositories}, MSR '15, pages 202--207, Piscataway, NJ, USA, 2015. IEEE
   Press.
+
+\bibitem{Bloemen:2014}
+Remco Bloemen, Chintan Amrit, Stefan Kuhlmann, and Gonzalo Ordonez-Matamoros.
+\newblock Gentoo package dependencies over time.
+\newblock pages 404--407, 05 2014.
 
 \bibitem{brin1998anatomy}
 Sergey Brin and Lawrence Page.
@@ -25,6 +45,11 @@ Georgios Gousios.
 \newblock In {\em Proceedings of the 10th Working Conference on Mining Software
   Repositories}, MSR '13, pages 233--236, Piscataway, NJ, USA, 2013. IEEE
   Press.
+
+\bibitem{Kabbedijk:2011}
+Jaap Kabbedijk and Slinger Jansen.
+\newblock Steering insight: An exploration of the ruby software ecosystem.
+\newblock volume~80, pages 44--55, 06 2011.
 
 \bibitem{Kikas:2017}
 Riivo Kikas, Georgios Gousios, Marlon Dumas, and Dietmar Pfahl.
@@ -58,6 +83,13 @@ David Messerschmitt and Clemens Szyperski.
   and Industry}.
 \newblock 01 2003.
 
+\bibitem{Mordal:2013}
+Karine Mordal-Manet, Nicolas Anquetil, Jannik Laval, Alexander Serebrenik,
+  Bogdan Vasilescu, and Stéphane Ducasse.
+\newblock Software quality metrics aggregation in industry.
+\newblock {\em Journal of Software: Evolution and Process}, 25:1117--1135, 10
+  2013.
+
 \bibitem{Myers:2003}
 Christopher~R. Myers.
 \newblock Software systems as complex networks: Structure, function, and
@@ -69,9 +101,19 @@ Amantia Pano, Daniel Graziotin, and Pekka Abrahamsson.
 \newblock What leads developers towards the choice of a javascript framework?
 \newblock {\em CoRR}, abs/1605.04303, 2016.
 
+\bibitem{Plakidas:2017}
+Konstantinos Plakidas, Daniel Schall, and Uwe Zdun.
+\newblock Evolution of the r software ecosystem.
+\newblock {\em J. Syst. Softw.}, 132(C):119--146, October 2017.
+
 \bibitem{preston-werner}
 Tom Preston-Werner.
 \newblock Semantic versioning 2.0.0.
+
+\bibitem{Raemaekers:2013}
+Steven Raemaekers, Arie van Deursen, and Joost Visser.
+\newblock The maven repository dataset of metrics, changes, and dependencies.
+\newblock pages 221--224, 05 2013.
 
 \bibitem{Manikas:2017}
 M.~{Seppänen}, S.~{Hyrynsalmi}, K.~{Manikas}, and A.~{Suominen}.
