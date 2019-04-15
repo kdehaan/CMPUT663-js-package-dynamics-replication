@@ -237,7 +237,8 @@ that developer interest is waning, while steady activity would
 indicate that the ecosystem as a whole is healthy and will continue to
 evolve. To search for these potential indicators in the \code{npm} package environment,
 we investigate the number of packages created and updated over time, as well
-as system-wide trends of dependencies within packages. In Figure \ref{npmGrowth},
+as system-wide trends of dependencies within packages. 
+In Figure \ref{npmGrowth},
 we can observe that while \code{npm} is still growing, the speed at which new packages
 are created has slowed from an exponential to a linear rate. Some other things of note 
 include an observable spike in package creation and updates around March 2016, the month 
@@ -247,7 +248,16 @@ when developer Azer Ko\c{c}ulu removed his 273 packages (including the popular p
 \code{Node.js} projects\footnote{https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm}.
 There is also a significant spike in package updates observed in the month of January 2019, caused 
 by some source currently unknown to the authors [TRY TO FIGURE THIS ONE OUT].
-[ADD CONCAVITY DATA]. Figure 2 [CURRENTLY MISSING][MORE DATA COMMENTARY].
+[ADD CONCAVITY DATA]. 
+
+\begin{figure}
+  \includegraphics[width=1\linewidth]{figures/packages_vs_dependencies.png}
+  \caption{Axis \code{y1} shows growth in number of \code{npm} packages (blue line), and the number of package dependencies (orange line) over time. 
+  Axis \code{y2} shows the average number of dependencies per package (green line).}
+  \label{packVSDependencies}
+\end{figure}
+
+Figure 2 [CURRENTLY MISSING][MORE DATA COMMENTARY].
 
 To better visualize the status of inter-package dependencies, we constructed
 a directed dependency graph using dependants as out-degrees and
@@ -276,22 +286,17 @@ paper \cite{Wittern:2016}.
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{figures/npm_deps_monthly_out_degree.pdf}
-  \caption{\code{npm} packages by their number of dependencies on other packages}
+  \caption{\code{npm} packages by their number of dependencies on other packages.}
   \label{outDegree}
 \end{figure}
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{figures/npm_deps_monthly_in_degree.pdf}
-  \caption{\code{npm} packages by the number of other packages depending on them}
+  \caption{\code{npm} packages by the number of other packages depending on them.}
   \label{inDegree}
 \end{figure}
 
-\begin{figure}
-  \includegraphics[width=1\linewidth]{figures/packages_vs_dependencies.png}
-  \caption{axis \textbf{y1} shows growth in number of packages in npm (blue line), and the number of dependencies (orange line), 
-  with axis \textbf{y2} showing average number of dependencies per package (green line)}
-  \label{packVSDependencies}
-\end{figure}
+
 
 \begin{figure}
   % TODO NOTE THAT THIS HAS LOWER NUMBERS THAN THE ORIGINAL PAPER DUE TO MONTHLY PAGERANKS
