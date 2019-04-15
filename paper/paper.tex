@@ -490,6 +490,18 @@ Java-based Maven ecosystem. Another work investigates the
 result of changing project interdependencies in Apache \cite{Bavota:2013}, 
 and still others evaluate evolution over time in ecosystems like
 Gentoo \cite{Bloemen:2014}, Ruby, \cite{Kabbedijk:2011}, and R \cite{Plakidas:2017}.
+Some works have looked empirically at the results of changing versions
+within software ecosystems (including \code{npm}), finding that
+developers often encounter difficulties when attempting to avoid
+breaking dependencies \cite{Bogart:2015}.
+
+Finally, \code{npm} has been investigated informally. In
+the \code{pagerank} package, web-based \code{PageRanks} are used to evaluate
+package popularity\footnote{https://www.npmjs.com/package/pagerank}.
+The project code{npm-by-the-numbers} also provides various statistics
+about the state of \code{npm}, but is significantly out of date and 
+in contrast to this work does not provide an evaluation of the ecosystem over time
+or give any insight into application usage\footnote{https://github.com/ashleygwilliams/npm-by-the-numbers}.
 
 
 \section{Conclusion}
@@ -545,6 +557,14 @@ to use in their applications.
   Remco Bloemen, Chintan Amrit, Stefan Kuhlmann, and Gonzalo Ordonez-Matamoros.
   \newblock Gentoo package dependencies over time.
   \newblock pages 404--407, 05 2014.
+  
+  \bibitem{Bogart:2015}
+  Christopher Bogart, Christian K{\"a}stner, and James Herbsleb.
+  \newblock When it breaks, it breaks: How ecosystem developers reason about the
+    stability of dependencies.
+  \newblock In {\em Proceedings of the ASE Workshop on Software Support for
+    Collaborative and Global Software Engineering (SCGSE)}, pages 86--89, 11
+    2015.
   
   \bibitem{brin1998anatomy}
   Sergey Brin and Lawrence Page.
@@ -652,6 +672,7 @@ to use in their applications.
   \newblock In {\em Proceedings of the 13th International Conference on Mining
     Software Repositories}, MSR '16, pages 351--361, New York, NY, USA, 2016.
     ACM.
+  
 
 \end{thebibliography}
 

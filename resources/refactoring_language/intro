@@ -328,6 +328,67 @@ insight derived from client applications.
 
 
 
+/////////////////////
+
+In [11], the authors present results of a quantitative study of the
+Ruby ecosystem. The paper presents a graph visualization
+of the whole ecosystem as well as some descriptive statistics
+and histograms about selected characteristics of packages,
+including downloads and package size. In contrast to our
+work, the dataset is much smaller, having only around 10K
+gem nodes and 13.1K dependencies. Furthermore, the paper
+does not go into the dynamics of the ecosystem, considering
+instead a single point in time. We did not find any published
+empirical analyses of the npm ecosystem.
+
+
+Some works have studied the evolution of versions and corresponding 
+change of software projects. For example, in a recent empirical 
+study [5] regarding two ecosystems (including
+npm) the authors find that developers struggle with changing 
+versions as they might break dependent code.
+
+Some works have looked empirically at the results of changing versions
+within software ecosystems (including \code{npm}), finding that
+developers often encounter difficulties when attempting to avoid
+breaking dependencies \cite{Bogart:2015}.
+
+Finally, \code{npm} has been investigated informally. In
+the \code{pagerank} package, web-based \code{PageRanks} are used to evaluate
+package popularity\footnote{https://www.npmjs.com/package/pagerank}.
+The project code{npm-by-the-numbers} also provides various statistics
+about the state of \code{npm}, but is significantly out of date and 
+in contrast to this work does not provide an evaluation of the ecosystem over time
+or give any insight into application usage\footnote{https://github.com/ashleygwilliams/npm-by-the-numbers}.
+
+
+In contrast to these works, we assess versions in npm from a
+black-box perspective: we do not assess how version changes
+are reflected in the implementation of individual packages,
+but focus on the occurrence of version numbers and how
+they are adopted by application developers.
+
+Finally, npm has occasionally been analyzed out of the context 
+of peer-reviewed venues. npm packages pagerank provides a 
+keyword-based search for packages, and presents the
+results as recommendations based on their PageRank [21].
+While we also consider the PageRank as a possible popularity 
+measure, we have shown that this metric may not be
+adequate for packages most useful to application developers
+(Section 4.2). The project npm by numbers analyses a
+snapshot of the npm ecosystem from September 2015 and
+presents various statistics on it, including the distribution
+of version numbers and releases of packages and the 
+dependencies between packages [25]. In contrast to our work, npm
+by numbers considers only a single point in time, whereas
+we focus on the evolution of the ecosystem, and provides no
+insight derived from client applications.
+
+
+
+////////////////////////
+
+
 With the differences and changes in the relationships between
 popularity measures explored, we can now examine \code{npm}
 rankings in particular, as it is most representative of the 
