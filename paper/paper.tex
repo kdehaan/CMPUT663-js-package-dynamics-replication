@@ -392,44 +392,45 @@ as dependencies for other \code{npm} packages, and rarely used outside of the
 \code{npm} package environment. Conversely, packages that exhibit
 significant popularity by the \code{GitHub} rank tend to be \textbf{end user} packages more
 commonly used in application development as opposed to package construction. 
-In order to confirm this hypothesis, we examine keywords associated with each
-ranking system, as is done in the original paper.
+% In order to confirm this hypothesis, we examine keywords associated with each
+% ranking system, as is done in the original paper.
 
-\begin{table}
-  \centering
-  % TODO NOTE THAT THIS HAS LOWER NUMBERS THAN THE ORIGINAL PAPER DUE TO MONTHLY PAGERANKS
-  \begin{tabular}{c|c|c|c}
-    Keyword & "\code{npm} strong" & "\code{GitHub} strong" & Diff. \\
-    \hline
-     & - & 0.550 & 0.345\\
-     & 0.550 & - & 0.444\\
-     & 0.345 & 0.444 & -\\
+% \begin{table}
+%   \centering
+%   % TODO NOTE THAT THIS HAS LOWER NUMBERS THAN THE ORIGINAL PAPER DUE TO MONTHLY PAGERANKS
+%   \begin{tabular}{c|c}
+%     Keyword & "\code{npm} strong" \\
+%     \hline
+%     \code{test} & 32 \\
+%     \code & 0.550\\
+%      & 0.345\\
 
-  \end{tabular}
-  \caption{"\code{npm} strong" keywords ordered by difference in occurrence between correlated measures.}
-  \label{npmStrong}
-\end{table}
+%   \end{tabular}
+%   \caption{Sample "\code{npm} strong" keywords accociated most significantly with high \code{npm} rankings.}
+%   \label{npmStrong}
+% \end{table}
 
-\begin{table}
-  \centering
-  % TODO NOTE THAT THIS HAS LOWER NUMBERS THAN THE ORIGINAL PAPER DUE TO MONTHLY PAGERANKS
-  \begin{tabular}{c|c|c|c}
-    Keyword  & "\code{GitHub} strong" & "\code{npm} strong" & Diff. \\
-    \hline
-     & - & 0.550 & 0.345\\
-     & 0.550 & - & 0.444\\
-     & 0.345 & 0.444 & -\\
+% \begin{table}
+%   \centering
+%   % TODO NOTE THAT THIS HAS LOWER NUMBERS THAN THE ORIGINAL PAPER DUE TO MONTHLY PAGERANKS
+%   \begin{tabular}{c|c|c|c}
+%     Keyword & "\code{GitHub} strong" \\
+%     \hline
+%     \code{ember-addon} & 31 \\
+%     \code{css} & 27\\
+%     \code{react} & 26\\
+%     \code{json} & 20\\
+%     \code{http} & 20\\
+%   \end{tabular}
+%   \caption{"\code{GitHub} strong" keywords ordered by difference in occurrence between correlated measures.}
+%   \label{githubStrong}
+% \end{table}
 
-  \end{tabular}
-  \caption{"\code{GitHub} strong" keywords ordered by difference in occurrence between correlated measures.}
-  \label{githubStrong}
-\end{table}
 
-
-Tables \ref{npmStrong} and \ref{githubStrong} display keywords most strongly associated with
-a single popularity ranking. As the keywords in Table \ref{npmStrong} are closely linked to 
-low level utilities, and the keywords of Table \ref{githubStrong} are strongly related to
-application frameworks, we feel confident confirming the hypothesis of the original authors.
+% Tables \ref{npmStrong} and \ref{githubStrong} display keywords most strongly associated with
+% a single popularity ranking. As the keywords in Table \ref{npmStrong} are closely linked to 
+% low level utilities, and the keywords of Table \ref{githubStrong} are strongly related to
+% application frameworks, we feel confident confirming the hypothesis of the original authors.
 
 \subsection{Popularity Over Time}
 
