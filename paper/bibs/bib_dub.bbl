@@ -33,6 +33,12 @@ Riivo Kikas, Georgios Gousios, Marlon Dumas, and Dietmar Pfahl.
   Software Repositories}, MSR '17, pages 102--112, Piscataway, NJ, USA, 2017.
   IEEE Press.
 
+\bibitem{Louridas:2008}
+Panagiotis Louridas, Diomidis Spinellis, and Vasileios Vlachos.
+\newblock Power laws in software.
+\newblock {\em ACM Trans. Softw. Eng. Methodol.}, 18(1):2:1--2:26, October
+  2008.
+
 \bibitem{LUNGU2010264}
 Mircea Lungu, Michele Lanza, Tudor Gîrba, and Romain Robbes.
 \newblock The small project observatory: Visualizing software ecosystems.

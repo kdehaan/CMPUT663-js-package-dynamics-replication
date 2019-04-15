@@ -219,6 +219,23 @@ software related artifacts and ecosystems [12, 18].
 
 [todo ^^^^]
 
+In section \ref{}, we revisit the popularity measures
+investigated in the original paper \cite{Wittern:2016} to discover
+changes in the relationships between package rankings
+both inside and outside of the \code{npm} ecosystem,
+gaining insight into the dynamics of \code{npm} package popularity.
+
+\textbf{Takeaways.} We find that while the \code{npm} ecosystem
+continues to grow, the rate of growth is no longer superlinear, 
+a possible sign of the ecosystem beginning to reach some form of maturity.
+In the relationships between packages, we find that though the average number
+of dependencies continues to grow, there has been a recent decline in the
+rate of this growth. Accordingly, we have found that the number of packages with
+zero dependencies has increased from 28.7% in September 2015 to [DATA REQUIRED]%
+as of April 2019. The percentage of packages that are depended on has
+also declined, albeit still exhibiting a power law relationship as observed
+in prior software ecosystem research \cite{Witterm:2016}
+
 
 
 
