@@ -381,6 +381,7 @@ with a high rank in one metric can be ranked much lower by another metric.
 
 \subsection{Distinct Package Types}
 
+
 As we demonstrated in section \ref{metricDiff}, packages that perform well
 by one measure of popularity can perform poorly by others. The original paper
 proposes that one major source of this differential is in the way that packages
@@ -393,6 +394,38 @@ significant popularity by the \code{GitHub} rank tend to be \textbf{end user} pa
 commonly used in application development as opposed to package construction. 
 In order to confirm this hypothesis, we examine keywords associated with each
 ranking system, as is done in the original paper.
+
+\begin{table}
+  \centering
+  % TODO NOTE THAT THIS HAS LOWER NUMBERS THAN THE ORIGINAL PAPER DUE TO MONTHLY PAGERANKS
+  \begin{tabular}{c|c|c|c}
+    Keyword & "\code{npm} strong" & "\code{GitHub} strong" & Diff. \\
+    \hline
+     & - & 0.550 & 0.345\\
+     & 0.550 & - & 0.444\\
+     & 0.345 & 0.444 & -\\
+
+  \end{tabular}
+  \caption{"\code{npm} strong" keywords ordered by difference in occurrence between correlated measures.}
+  \label{npmStrong}
+\end{table}
+
+\begin{table}
+  \centering
+  % TODO NOTE THAT THIS HAS LOWER NUMBERS THAN THE ORIGINAL PAPER DUE TO MONTHLY PAGERANKS
+  \begin{tabular}{c|c|c|c}
+    Keyword  & "\code{GitHub} strong" & "\code{npm} strong" & Diff. \\
+    \hline
+     & - & 0.550 & 0.345\\
+     & 0.550 & - & 0.444\\
+     & 0.345 & 0.444 & -\\
+
+  \end{tabular}
+  \caption{"\code{GitHub} strong" keywords ordered by difference in occurrence between correlated measures.}
+  \label{githubStrong}
+\end{table}
+
+
 Tables \ref{npmStrong} and \ref{githubStrong} display keywords most associated with
 each popularity ranking. As the keywords in Table \ref{npmStrong} are closely linked to 
 low level utilities, and the keywords of Table \ref{githubStrong} are strongly related to
