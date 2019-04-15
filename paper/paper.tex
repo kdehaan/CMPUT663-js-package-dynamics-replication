@@ -340,6 +340,21 @@ As per the original paper we analyzed popularity of \code{npm} packages using th
 
 \subsection{Relationships between Measures}\label{metricDiff}
 
+\begin{table}
+  \centering
+  % TODO NOTE THAT THIS HAS LOWER NUMBERS THAN THE ORIGINAL PAPER DUE TO MONTHLY PAGERANKS
+  \begin{tabular}{c|c c c}
+     & \code{npm} PageRank & Downloads & \code{GitHub} \\
+    \hline
+    \code{npm} PageRank & - & 0.389 & 0.405\\
+    Downloads & 0.389 & - & 0.576\\
+    \code{GitHub} & 0.405 & 0.576 & -\\
+
+  \end{tabular}
+  \caption{Spearman rank correlation coefficients between selected measures of popularity.}
+  \label{corr}
+\end{table}
+
 In order to evaluate how different popularity metrics
 relate to each other and for what purposes they can be used,
 we investigate the relationships between our three chosen metrics.
@@ -398,7 +413,7 @@ ecosystem at that time.
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{figures/geo_mean_highest_pagerank.pdf}
-  \caption{\code{npm} rank (PageRank) of the five packages with the lowest overall geometric mean}
+  \caption{\code{npm} rank (PageRank) of the five packages with the lowest overall geometric mean.}
   \label{topFive}
 \end{figure}
 
@@ -427,7 +442,7 @@ similar yet distinct functionality.
 
 \begin{figure*}
   \includegraphics[width=1\textwidth]{figures/highest_ranked.pdf}
-  \caption{\code{npm} rank (PageRank) of the five packages each year with the lowest geometric}
+  \caption{\code{npm} rank (PageRank) of the five packages each year with the lowest geometric mean.}
   \label{ranksByYear}
 \end{figure*}
 
@@ -435,7 +450,7 @@ While these packages represent the most consistently popular
 members of \code{npm}, we also evaluate the most popular packages
 on a yearly basis. Figure \ref{ranksByYear} presents the top five packages
 for each individual year from 2011 to 2019. As noted in the original paper,
-the top packages per year are relatively stable from 2013 onwards \cite{Wittern:2016}.
+the top packages per year are relatively stable from 2013 onward \cite{Wittern:2016}.
 One notable exception to this rule is the 2016 rise in popularity of \code{eslint},
 a tool for improving the quality of \code{JavaScript} code\footnote{https://www.npmjs.com/package/eslint}.
 
@@ -470,7 +485,7 @@ ecosystem matures.
     2018 & 0 & 15 & 31\\
     2019 & 0 & 4 & 12\\
   \end{tabular}
-  \caption{Number of packages entering top \code{npm} ranks for the first time}
+  \caption{Number of packages entering top \code{npm} ranks for the first time.}
   \label{numEnteringTop}
 \end{table}
 
